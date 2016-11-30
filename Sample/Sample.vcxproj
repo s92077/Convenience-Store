@@ -97,6 +97,20 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\Convenience  Store\Bill.h" />
+    <ClInclude Include="..\..\..\Convenience  Store\Clerk.h" />
+    <ClInclude Include="..\..\..\Convenience  Store\Food.h" />
+    <ClInclude Include="..\..\..\Convenience  Store\Manager.h" />
+    <ClInclude Include="..\..\..\Convenience  Store\Necessities.h" />
+    <ClInclude Include="..\..\..\Convenience  Store\Order.h" />
+    <ClInclude Include="..\..\..\Convenience  Store\Partimer.h" />
+    <ClInclude Include="..\..\..\Convenience  Store\Product.h" />
+    <ClInclude Include="..\..\..\Convenience  Store\Service.h" />
+    <ClInclude Include="..\..\..\Convenience  Store\Staff.h" />
+    <ClInclude Include="..\..\..\Convenience  Store\Supplier.h" />
+    <ClInclude Include="..\..\..\Convenience  Store\theCooked.h" />
+    <ClInclude Include="..\..\..\Convenience  Store\theFrozen.h" />
+    <ClInclude Include="..\..\..\Convenience  Store\theWarm.h" />
     <ClInclude Include="Form1.h">
       <FileType>CppForm</FileType>
     </ClInclude>
