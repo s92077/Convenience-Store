@@ -97,20 +97,20 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\Convenience  Store\Bill.h" />
-    <ClInclude Include="..\..\..\Convenience  Store\Clerk.h" />
-    <ClInclude Include="..\..\..\Convenience  Store\Food.h" />
-    <ClInclude Include="..\..\..\Convenience  Store\Manager.h" />
-    <ClInclude Include="..\..\..\Convenience  Store\Necessities.h" />
-    <ClInclude Include="..\..\..\Convenience  Store\Order.h" />
-    <ClInclude Include="..\..\..\Convenience  Store\Partimer.h" />
-    <ClInclude Include="..\..\..\Convenience  Store\Product.h" />
-    <ClInclude Include="..\..\..\Convenience  Store\Service.h" />
-    <ClInclude Include="..\..\..\Convenience  Store\Staff.h" />
-    <ClInclude Include="..\..\..\Convenience  Store\Supplier.h" />
-    <ClInclude Include="..\..\..\Convenience  Store\theCooked.h" />
-    <ClInclude Include="..\..\..\Convenience  Store\theFrozen.h" />
-    <ClInclude Include="..\..\..\Convenience  Store\theWarm.h" />
+    <ClInclude Include="Class\Bill.h" />
+    <ClInclude Include="Class\Clerk.h" />
+    <ClInclude Include="Class\Food.h" />
+    <ClInclude Include="Class\Manager.h" />
+    <ClInclude Include="Class\Necessities.h" />
+    <ClInclude Include="Class\Order.h" />
+    <ClInclude Include="Class\Partimer.h" />
+    <ClInclude Include="Class\Product.h" />
+    <ClInclude Include="Class\Service.h" />
+    <ClInclude Include="Class\Staff.h" />
+    <ClInclude Include="Class\Supplier.h" />
+    <ClInclude Include="Class\theCooked.h" />
+    <ClInclude Include="Class\theFrozen.h" />
+    <ClInclude Include="Class\theWarm.h" />
     <ClInclude Include="Form1.h">
       <FileType>CppForm</FileType>
     </ClInclude>

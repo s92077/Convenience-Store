@@ -41,46 +41,46 @@
     <ClInclude Include="resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Convenience  Store\Bill.h">
+    <ClInclude Include="Class\Bill.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Convenience  Store\Clerk.h">
+    <ClInclude Include="Class\Clerk.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Convenience  Store\Food.h">
+    <ClInclude Include="Class\Food.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Convenience  Store\Manager.h">
+    <ClInclude Include="Class\Manager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Convenience  Store\Necessities.h">
+    <ClInclude Include="Class\Necessities.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Convenience  Store\Order.h">
+    <ClInclude Include="Class\Order.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Convenience  Store\Partimer.h">
+    <ClInclude Include="Class\Partimer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Convenience  Store\Product.h">
+    <ClInclude Include="Class\Product.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Convenience  Store\Service.h">
+    <ClInclude Include="Class\Service.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Convenience  Store\Staff.h">
+    <ClInclude Include="Class\Staff.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Convenience  Store\Supplier.h">
+    <ClInclude Include="Class\Supplier.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Convenience  Store\theCooked.h">
+    <ClInclude Include="Class\theCooked.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Convenience  Store\theFrozen.h">
+    <ClInclude Include="Class\theFrozen.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Convenience  Store\theWarm.h">
+    <ClInclude Include="Class\theWarm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
