@@ -104,10 +104,7 @@
     <ClInclude Include="Class\Necessities.h" />
     <ClInclude Include="Class\Order.h" />
     <ClInclude Include="Class\Partimer.h" />
-    <ClInclude Include="Class\Product.h">
-      <FileType>CppHeader</FileType>
-      <DeploymentContent>true</DeploymentContent>
-    </ClInclude>
+    <ClInclude Include="Class\Product.h" />
     <ClInclude Include="Class\Service.h" />
     <ClInclude Include="Class\Staff.h" />
     <ClInclude Include="Class\Supplier.h" />

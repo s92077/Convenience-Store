@@ -1,4 +1,5 @@
 #pragma once
+
 namespace Sample {
 
 	using namespace System;

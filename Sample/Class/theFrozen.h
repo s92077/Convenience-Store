@@ -9,7 +9,7 @@ public:
 	~theFrozen();
 
 private:
-	int temperature;
+	
 };
 
 theFrozen::theFrozen()
