@@ -10,7 +10,6 @@ public:
 
 private:
 	struct tm cooked_time;
-	int uuh;
 };
 
 theCooked::theCooked()
