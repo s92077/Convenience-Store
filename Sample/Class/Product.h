@@ -1,10 +1,8 @@
 #ifndef PRODUCT_H
 #define PRODUCT_H
 #include<iostream>
-#include"Stdafx.h"
-using namespace std;
 
-class Product
+ref class Product
 {
 public:
 	Product();
