@@ -14,7 +14,8 @@ private:
 	System::String ^productname;
 	int price; //price of the product
 	uint8_t status; //[on shelf][][][][][][][]
-	time_t arval_date;
+	struct tm arval_date;
+	struct tm onshelf_date;
 };
 
 Product::Product()

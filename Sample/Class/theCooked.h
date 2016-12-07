@@ -9,7 +9,7 @@ public:
 	~theCooked();
 
 private:
-	
+	struct tm cooked_time;
 };
 
 theCooked::theCooked()

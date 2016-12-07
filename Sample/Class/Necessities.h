@@ -9,7 +9,7 @@ public:
 	~Necessities();
 
 private:
-	
+	uint32_t category; //1.stationary 2. hygiene item
 };
 
 Necessities::Necessities()
