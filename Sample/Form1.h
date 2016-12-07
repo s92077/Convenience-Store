@@ -1,5 +1,5 @@
 #pragma once
-
+#include"Class\Product.h"
 namespace Sample {
 
 	using namespace System;

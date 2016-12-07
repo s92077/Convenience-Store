@@ -1,9 +1,9 @@
 #ifndef PRODUCT_H
 #define PRODUCT_H
 #include<iostream>
-using namespace std;
+#include<string>
 
-ref class Product
+class Product
 {
 public:
 	Product();
@@ -11,7 +11,7 @@ public:
 
 private:
 	uint32_t id;
-	System::String ^productname;
+	std::string productname;
 	int price; //price of the product
 	uint8_t status; //[on shelf][][][][][][][]
 	struct tm arval_date;
