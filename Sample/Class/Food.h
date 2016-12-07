@@ -9,8 +9,6 @@ public:
 	~Food();
 private:
 	struct tm expired_date;
-	int lll;
-	int XXX;
 };
 
 Food::Food()
