@@ -1,6 +1,6 @@
 #ifndef BILL
 #define BILL
-
+#include"Product.h"
 
 class Bill:public Product
 {
