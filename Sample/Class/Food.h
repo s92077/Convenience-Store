@@ -8,6 +8,7 @@ public:
 	Food();
 	~Food();
 private:
+	struct tm expired_date;
 
 };
 

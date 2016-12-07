@@ -7,9 +7,8 @@ class theCooked:public Food
 public:
 	theCooked();
 	~theCooked();
-
 private:
-	
+	struct tm cooked_time;
 };
 
 theCooked::theCooked()
