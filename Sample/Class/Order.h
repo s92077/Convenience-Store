@@ -1,8 +1,8 @@
 #ifndef ORDER
 #define ORDER
+#include"Necessities.h"
 
-
-class Order:public Product
+class Order:public Necessities
 {
 public:
 	Order();

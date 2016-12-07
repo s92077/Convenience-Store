@@ -1,8 +1,8 @@
 #ifndef THEFROZEN
 #define THEFROZEN
+#include"Food.h"
 
-
-class theFrozen:public Product
+class theFrozen:public Food
 {
 public:
 	theFrozen();

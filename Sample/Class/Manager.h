@@ -1,8 +1,8 @@
 #ifndef MANAGER
 #define MANAGER
+#include"Staff.h"
 
-
-class Manager:public Product
+class Manager:public Staff
 {
 public:
 	Manager();

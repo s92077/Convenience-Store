@@ -2,7 +2,7 @@
 #define SUPPLIER
 
 
-class Supplier:public Product
+class Supplier
 {
 public:
 	Supplier();

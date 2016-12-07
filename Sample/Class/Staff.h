@@ -2,7 +2,7 @@
 #define STAFF
 
 
-class Staff:public Product
+class Staff
 {
 public:
 	Staff();

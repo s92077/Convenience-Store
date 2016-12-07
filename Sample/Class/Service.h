@@ -2,7 +2,7 @@
 #define SERVICE
 
 
-class Service:public Product
+class Service
 {
 public:
 	Service();

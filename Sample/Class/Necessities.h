@@ -1,6 +1,6 @@
 #ifndef NECESSITIES
 #define NECESSITIES
-
+#include"Product.h"
 
 class Necessities:public Product
 {

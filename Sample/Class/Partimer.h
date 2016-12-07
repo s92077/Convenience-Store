@@ -1,8 +1,8 @@
 #ifndef PARTIMER
 #define PARTIMER
+#include"Staff.h"
 
-
-class Partimer:public Product
+class Partimer:public Staff
 {
 public:
 	Partimer();

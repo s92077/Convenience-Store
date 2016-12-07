@@ -50,9 +50,6 @@
     <ClInclude Include="Class\Food.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Class\Manager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Class\Necessities.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -81,6 +78,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Class\theWarm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Class\Manager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

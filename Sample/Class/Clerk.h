@@ -1,8 +1,8 @@
 #ifndef CLERK
 #define CLERK
+#include"Staff.h"
 
-
-class Clerk:public Product
+class Clerk:public Staff
 {
 public:
 	Clerk();

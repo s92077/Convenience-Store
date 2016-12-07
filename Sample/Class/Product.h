@@ -13,7 +13,6 @@ private:
 	int price; //price of the product
 	uint8_t status; //[on shelf][][][][][][][]
 	time_t arval_date;
-	
 };
 
 Product::Product()
