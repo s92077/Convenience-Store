@@ -9,9 +9,9 @@ ref class Product
 {
 public:
 	Product();
-	Product(uint32_t, System::String^);
-	Product(uint32_t, System::String^,SYSTEMTIME);
-	Product(uint32_t, System::String^,SYSTEMTIME,SYSTEMTIME);
+	Product(uint32_t, System::String^, int);
+	Product(uint32_t, System::String^,SYSTEMTIME, int);
+	Product(uint32_t, System::String^,SYSTEMTIME,SYSTEMTIME, int);
 	SYSTEMTIME& get_arvaltime();
 	SYSTEMTIME& get_onshelftime();
 	void set_arvaltime(int year, int month, int day, int hour, int minute, int second);
@@ -31,28 +31,32 @@ Product::Product()
 {
 	this->id = -1;
 	this->productname = "";
+	this->price = -1;
 	arval_date = new SYSTEMTIME;
 	GetLocalTime(this->arval_date);
 	onshelf_date = nullptr;
 }
-Product::Product(uint32_t id, System::String^ name)
+Product::Product(uint32_t id, System::String^ name,int price)
 {
 	this->id = id;
 	this->productname = name;
+	this->price = price;
 	arval_date = new SYSTEMTIME;
 	GetLocalTime(this->arval_date);
 	onshelf_date = nullptr;
 }
-Product::Product(uint32_t id, System::String^ name, SYSTEMTIME arval) {
+Product::Product(uint32_t id, System::String^ name, SYSTEMTIME arval, int price) {
 	this->id = id;
 	this->productname = name;
+	this->price = price;
 	arval_date = new SYSTEMTIME;
 	*(this->arval_date) = arval;
 	onshelf_date = nullptr;
 }
-Product::Product(uint32_t id, System::String^ name, SYSTEMTIME arval, SYSTEMTIME onshelf) {
+Product::Product(uint32_t id, System::String^ name, SYSTEMTIME arval, SYSTEMTIME onshelf, int price) {
 	this->id = id;
 	this->productname = name;
+	this->price = price;
 	arval_date = new SYSTEMTIME;
 	*(this->arval_date) = arval;
 	onshelf_date = new SYSTEMTIME;
