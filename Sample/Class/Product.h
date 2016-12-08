@@ -17,10 +17,8 @@ private:
 	std::string productname;
 	int price; //price of the product
 	uint8_t status; //[on shelf][][][][][][][]
-#pragma managed(push, off)
 	SYSTEMTIME arval_date;
 	SYSTEMTIME onshelf_date;
-#pragma managed(pop)
 	time_t a;
 };
 
