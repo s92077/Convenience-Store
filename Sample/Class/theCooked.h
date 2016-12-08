@@ -6,10 +6,12 @@ class theCooked:public Food
 {
 public:
 	theCooked();
+	theCooked();
 	~theCooked();
 
 private:
-	struct tm cooked_time;
+	SYSTEMTIME* cooked_time;
+
 };
 
 theCooked::theCooked()

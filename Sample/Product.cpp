@@ -44,6 +44,9 @@ void Product::set_arvaltime(int year, int month, int day, int hour, int minute, 
 	(*(this->arval_date)).wSecond = second;
 
 }
+inline void Product::set_arvaltime_current() {
+	GetLocalTime(this->arval_date);
+}
 void Product::set_onshelftime(int year, int month, int day, int hour, int minute, int second) {
 	(*(this->onshelf_date)).wYear = year;
 	(*(this->onshelf_date)).wMonth = month;
@@ -51,16 +54,25 @@ void Product::set_onshelftime(int year, int month, int day, int hour, int minute
 	(*(this->onshelf_date)).wMinute = minute;
 	(*(this->onshelf_date)).wSecond = second;
 }
+inline void Product::set_onshelftime_current() {
+	GetLocalTime(this->onshelf_date);
+}
+void Product::set_price(int price) {
+	this->price = price;
+}
 inline SYSTEMTIME& Product::get_arvaltime() {
 	return *(this->arval_date);
 }
 inline SYSTEMTIME& Product::get_onshelftime() {
 	return *(this->onshelf_date);
 }
+inline int Product::get_price(int price) {
+	return this->price;
+}
 Product::~Product()
 {
-	if (arval_date != nullptr)
+	if (this->arval_date != nullptr)
 		delete[] arval_date;
-	if (onshelf_date)
+	if (this->onshelf_date)
 		delete[] onshelf_date;
 }

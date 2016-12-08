@@ -6,23 +6,14 @@ ref class Food:public Product
 {
 public:
 	Food();
-	Food(uint32_t id, System::String^ name, int price, SYSTEMTIME expired);
+	Food(uint32_t id, System::String^ name, SYSTEMTIME expired, int price);
+	Food(uint32_t id, System::String^ name, SYSTEMTIME arval, SYSTEMTIME expired, int price);
+	Food(uint32_t id, System::String^ name, SYSTEMTIME arval, SYSTEMTIME onshelf, SYSTEMTIME expired, int price);
+	void set_expiredtime(int year, int month, int day, int hour, int minute, int second);
+	SYSTEMTIME& get_expiredtime();
 	~Food();
 private:
 	SYSTEMTIME *expired_date;
 };
 
-Food::Food():Product()
-{
-}
-Food::Food(uint32_t id, System::String^ name, int price, SYSTEMTIME expired):Product(id, name, price)
-{
-	this->expired_date = new SYSTEMTIME;
-	*(this->expired_date) = expired;
-
-}
-
-Food::~Food()
-{
-}
 #endif
