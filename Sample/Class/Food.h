@@ -2,20 +2,18 @@
 #define FOOD
 #include"Product.h"
 
-class Food:public Product
+ref class Food:public Product
 {
 public:
 	Food();
+	Food(uint32_t id, System::String^ name, SYSTEMTIME expired, int price);
+	Food(uint32_t id, System::String^ name, SYSTEMTIME arval, SYSTEMTIME expired, int price);
+	Food(uint32_t id, System::String^ name, SYSTEMTIME arval, SYSTEMTIME onshelf, SYSTEMTIME expired, int price);
+	void set_expiredtime(int year, int month, int day, int hour, int minute, int second);
+	SYSTEMTIME& get_expiredtime();
 	~Food();
 private:
-	struct tm expired_date;
+	SYSTEMTIME *expired_date;
 };
 
-Food::Food()
-{
-}
-
-Food::~Food()
-{
-}
 #endif
