@@ -1,5 +1,5 @@
 #pragma once
-#include"Class\Food.h"
+#include"Class\theFrozen.h"
 namespace Sample {
 
 	using namespace System;
