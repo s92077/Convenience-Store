@@ -66,16 +66,18 @@ namespace Sample {
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(272, 80);
+			this->textBox1->Location = System::Drawing::Point(136, 40);
+			this->textBox1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(975, 43);
+			this->textBox1->Size = System::Drawing::Size(490, 25);
 			this->textBox1->TabIndex = 0;
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(1273, 66);
+			this->button1->Location = System::Drawing::Point(636, 33);
+			this->button1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(173, 64);
+			this->button1->Size = System::Drawing::Size(86, 32);
 			this->button1->TabIndex = 1;
 			this->button1->Text = L"¬d¸ß";
 			this->button1->UseVisualStyleBackColor = true;
@@ -83,47 +85,52 @@ namespace Sample {
 			// comboBox1
 			// 
 			this->comboBox1->FormattingEnabled = true;
-			this->comboBox1->Location = System::Drawing::Point(120, 80);
+			this->comboBox1->Location = System::Drawing::Point(60, 40);
+			this->comboBox1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->comboBox1->Name = L"comboBox1";
-			this->comboBox1->Size = System::Drawing::Size(121, 38);
+			this->comboBox1->Size = System::Drawing::Size(62, 23);
 			this->comboBox1->TabIndex = 3;
 			// 
 			// richTextBox1
 			// 
-			this->richTextBox1->Location = System::Drawing::Point(119, 192);
+			this->richTextBox1->Location = System::Drawing::Point(60, 96);
+			this->richTextBox1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->richTextBox1->Name = L"richTextBox1";
-			this->richTextBox1->Size = System::Drawing::Size(1327, 721);
+			this->richTextBox1->Size = System::Drawing::Size(666, 362);
 			this->richTextBox1->TabIndex = 4;
 			this->richTextBox1->Text = L"";
 			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(272, 134);
+			this->label1->Location = System::Drawing::Point(136, 67);
+			this->label1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(83, 30);
+			this->label1->Size = System::Drawing::Size(41, 15);
 			this->label1->TabIndex = 5;
 			this->label1->Text = L"label1";
 			// 
 			// richTextBox2
 			// 
-			this->richTextBox2->Location = System::Drawing::Point(1599, 66);
+			this->richTextBox2->Location = System::Drawing::Point(800, 33);
+			this->richTextBox2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->richTextBox2->Name = L"richTextBox2";
-			this->richTextBox2->Size = System::Drawing::Size(289, 847);
+			this->richTextBox2->Size = System::Drawing::Size(146, 426);
 			this->richTextBox2->TabIndex = 6;
 			this->richTextBox2->Text = L"";
 			// 
 			// Form1
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(16, 30);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 15);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(2004, 999);
+			this->ClientSize = System::Drawing::Size(1007, 484);
 			this->Controls->Add(this->richTextBox2);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->richTextBox1);
 			this->Controls->Add(this->comboBox1);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->textBox1);
+			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->Name = L"Form1";
 			this->Text = L"Form1";
 			this->ResumeLayout(false);
