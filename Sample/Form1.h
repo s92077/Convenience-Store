@@ -117,8 +117,10 @@ namespace Sample {
 	private: System::Windows::Forms::Button^  button3;
 	private: System::Windows::Forms::Button^  button4;
 	private: System::Windows::Forms::Button^  button5;
-private: System::Windows::Forms::Panel^  panel1;
-private: System::Windows::Forms::Panel^  panel2;
+private: System::Windows::Forms::Panel^  search;
+
+private: System::Windows::Forms::Panel^  purchase;
+
 private: System::Windows::Forms::TextBox^  textBox2;
 private: System::Windows::Forms::Label^  label7;
 private: System::Windows::Forms::Label^  label6;
@@ -134,6 +136,31 @@ private: System::Windows::Forms::TextBox^  textBox6;
 private: System::Windows::Forms::TextBox^  textBox5;
 private: System::Windows::Forms::TextBox^  textBox4;
 private: System::Windows::Forms::TextBox^  textBox3;
+private: System::Windows::Forms::CheckBox^  foodcheck;
+private: System::Windows::Forms::Panel^  login;
+private: System::Windows::Forms::TextBox^  account;
+private: System::Windows::Forms::TextBox^  passwordbox;
+
+
+
+
+private: System::Windows::Forms::Label^  label9;
+private: System::Windows::Forms::Label^  label8;
+private: System::Windows::Forms::Panel^  sell;
+private: System::Windows::Forms::Button^  button7;
+private: System::Windows::Forms::DataGridView^  dataGridView2;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  s基;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  s珇;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  s计秖;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  s癘;
+private: System::Windows::Forms::TextBox^  textBox9;
+private: System::Windows::Forms::TextBox^  textBox10;
+private: System::Windows::Forms::TextBox^  textBox11;
+private: System::Windows::Forms::Label^  label10;
+private: System::Windows::Forms::Label^  label11;
+private: System::Windows::Forms::Label^  label12;
+
+
 		 /// </summary>
 		System::ComponentModel::Container ^components;
 
@@ -162,8 +189,9 @@ private: System::Windows::Forms::TextBox^  textBox3;
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->button5 = (gcnew System::Windows::Forms::Button());
-			this->panel1 = (gcnew System::Windows::Forms::Panel());
-			this->panel2 = (gcnew System::Windows::Forms::Panel());
+			this->search = (gcnew System::Windows::Forms::Panel());
+			this->purchase = (gcnew System::Windows::Forms::Panel());
+			this->foodcheck = (gcnew System::Windows::Forms::CheckBox());
 			this->button6 = (gcnew System::Windows::Forms::Button());
 			this->textBox8 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
@@ -179,9 +207,30 @@ private: System::Windows::Forms::TextBox^  textBox3;
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
+			this->login = (gcnew System::Windows::Forms::Panel());
+			this->passwordbox = (gcnew System::Windows::Forms::TextBox());
+			this->label9 = (gcnew System::Windows::Forms::Label());
+			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->account = (gcnew System::Windows::Forms::TextBox());
+			this->sell = (gcnew System::Windows::Forms::Panel());
+			this->button7 = (gcnew System::Windows::Forms::Button());
+			this->dataGridView2 = (gcnew System::Windows::Forms::DataGridView());
+			this->s基 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->s珇 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->s计秖 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->s癘 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->textBox9 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox10 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox11 = (gcnew System::Windows::Forms::TextBox());
+			this->label10 = (gcnew System::Windows::Forms::Label());
+			this->label11 = (gcnew System::Windows::Forms::Label());
+			this->label12 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
-			this->panel1->SuspendLayout();
-			this->panel2->SuspendLayout();
+			this->search->SuspendLayout();
+			this->purchase->SuspendLayout();
+			this->login->SuspendLayout();
+			this->sell->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// textBox1
@@ -317,6 +366,7 @@ private: System::Windows::Forms::TextBox^  textBox3;
 			this->button4->TabIndex = 9;
 			this->button4->Text = L"綪扳";
 			this->button4->UseVisualStyleBackColor = true;
+			this->button4->Click += gcnew System::EventHandler(this, &Form1::button4_Click);
 			// 
 			// button5
 			// 
@@ -327,40 +377,50 @@ private: System::Windows::Forms::TextBox^  textBox3;
 			this->button5->Text = L"恨瞶";
 			this->button5->UseVisualStyleBackColor = true;
 			// 
-			// panel1
+			// search
 			// 
-			this->panel1->Controls->Add(this->panel2);
-			this->panel1->Controls->Add(this->dataGridView1);
-			this->panel1->Controls->Add(this->comboBox1);
-			this->panel1->Controls->Add(this->checkBox1);
-			this->panel1->Controls->Add(this->textBox1);
-			this->panel1->Controls->Add(this->button1);
-			this->panel1->Location = System::Drawing::Point(95, 94);
-			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(1659, 831);
-			this->panel1->TabIndex = 11;
+			this->search->Controls->Add(this->dataGridView1);
+			this->search->Controls->Add(this->comboBox1);
+			this->search->Controls->Add(this->checkBox1);
+			this->search->Controls->Add(this->textBox1);
+			this->search->Controls->Add(this->button1);
+			this->search->Location = System::Drawing::Point(96, 86);
+			this->search->Name = L"search";
+			this->search->Size = System::Drawing::Size(1659, 831);
+			this->search->TabIndex = 11;
 			// 
-			// panel2
+			// purchase
 			// 
-			this->panel2->Controls->Add(this->button6);
-			this->panel2->Controls->Add(this->textBox8);
-			this->panel2->Controls->Add(this->textBox7);
-			this->panel2->Controls->Add(this->textBox6);
-			this->panel2->Controls->Add(this->textBox5);
-			this->panel2->Controls->Add(this->textBox4);
-			this->panel2->Controls->Add(this->textBox3);
-			this->panel2->Controls->Add(this->label7);
-			this->panel2->Controls->Add(this->label6);
-			this->panel2->Controls->Add(this->label5);
-			this->panel2->Controls->Add(this->label4);
-			this->panel2->Controls->Add(this->label3);
-			this->panel2->Controls->Add(this->label2);
-			this->panel2->Controls->Add(this->label1);
-			this->panel2->Controls->Add(this->textBox2);
-			this->panel2->Location = System::Drawing::Point(0, 0);
-			this->panel2->Name = L"panel2";
-			this->panel2->Size = System::Drawing::Size(1656, 825);
-			this->panel2->TabIndex = 12;
+			this->purchase->Controls->Add(this->foodcheck);
+			this->purchase->Controls->Add(this->button6);
+			this->purchase->Controls->Add(this->textBox8);
+			this->purchase->Controls->Add(this->textBox7);
+			this->purchase->Controls->Add(this->textBox6);
+			this->purchase->Controls->Add(this->textBox5);
+			this->purchase->Controls->Add(this->textBox4);
+			this->purchase->Controls->Add(this->textBox3);
+			this->purchase->Controls->Add(this->label7);
+			this->purchase->Controls->Add(this->label6);
+			this->purchase->Controls->Add(this->label5);
+			this->purchase->Controls->Add(this->label4);
+			this->purchase->Controls->Add(this->label3);
+			this->purchase->Controls->Add(this->label2);
+			this->purchase->Controls->Add(this->label1);
+			this->purchase->Controls->Add(this->textBox2);
+			this->purchase->Location = System::Drawing::Point(68, 74);
+			this->purchase->Name = L"purchase";
+			this->purchase->Size = System::Drawing::Size(1684, 840);
+			this->purchase->TabIndex = 12;
+			// 
+			// foodcheck
+			// 
+			this->foodcheck->AutoSize = true;
+			this->foodcheck->Location = System::Drawing::Point(531, 63);
+			this->foodcheck->Name = L"foodcheck";
+			this->foodcheck->Size = System::Drawing::Size(102, 34);
+			this->foodcheck->TabIndex = 15;
+			this->foodcheck->Text = L"food";
+			this->foodcheck->UseVisualStyleBackColor = true;
 			// 
 			// button6
 			// 
@@ -375,6 +435,7 @@ private: System::Windows::Forms::TextBox^  textBox3;
 			// 
 			// textBox8
 			// 
+			this->textBox8->AcceptsTab = true;
 			this->textBox8->Location = System::Drawing::Point(668, 220);
 			this->textBox8->Name = L"textBox8";
 			this->textBox8->Size = System::Drawing::Size(435, 43);
@@ -382,6 +443,7 @@ private: System::Windows::Forms::TextBox^  textBox3;
 			// 
 			// textBox7
 			// 
+			this->textBox7->AcceptsTab = true;
 			this->textBox7->Location = System::Drawing::Point(668, 304);
 			this->textBox7->Name = L"textBox7";
 			this->textBox7->Size = System::Drawing::Size(435, 43);
@@ -389,6 +451,7 @@ private: System::Windows::Forms::TextBox^  textBox3;
 			// 
 			// textBox6
 			// 
+			this->textBox6->AcceptsTab = true;
 			this->textBox6->Location = System::Drawing::Point(668, 388);
 			this->textBox6->Name = L"textBox6";
 			this->textBox6->Size = System::Drawing::Size(435, 43);
@@ -396,6 +459,7 @@ private: System::Windows::Forms::TextBox^  textBox3;
 			// 
 			// textBox5
 			// 
+			this->textBox5->AcceptsTab = true;
 			this->textBox5->Location = System::Drawing::Point(668, 478);
 			this->textBox5->Name = L"textBox5";
 			this->textBox5->Size = System::Drawing::Size(435, 43);
@@ -403,6 +467,7 @@ private: System::Windows::Forms::TextBox^  textBox3;
 			// 
 			// textBox4
 			// 
+			this->textBox4->AcceptsTab = true;
 			this->textBox4->Location = System::Drawing::Point(668, 553);
 			this->textBox4->Name = L"textBox4";
 			this->textBox4->Size = System::Drawing::Size(435, 43);
@@ -410,6 +475,7 @@ private: System::Windows::Forms::TextBox^  textBox3;
 			// 
 			// textBox3
 			// 
+			this->textBox3->AcceptsTab = true;
 			this->textBox3->Location = System::Drawing::Point(668, 628);
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->Size = System::Drawing::Size(435, 43);
@@ -480,29 +546,192 @@ private: System::Windows::Forms::TextBox^  textBox3;
 			// 
 			// textBox2
 			// 
+			this->textBox2->AcceptsTab = true;
 			this->textBox2->Location = System::Drawing::Point(668, 135);
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->Size = System::Drawing::Size(435, 43);
 			this->textBox2->TabIndex = 0;
 			// 
+			// login
+			// 
+			this->login->Controls->Add(this->passwordbox);
+			this->login->Controls->Add(this->label9);
+			this->login->Controls->Add(this->label8);
+			this->login->Controls->Add(this->account);
+			this->login->Location = System::Drawing::Point(71, 53);
+			this->login->Name = L"login";
+			this->login->Size = System::Drawing::Size(1701, 878);
+			this->login->TabIndex = 13;
+			// 
+			// passwordbox
+			// 
+			this->passwordbox->Location = System::Drawing::Point(716, 409);
+			this->passwordbox->Name = L"passwordbox";
+			this->passwordbox->Size = System::Drawing::Size(335, 43);
+			this->passwordbox->TabIndex = 16;
+			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->Location = System::Drawing::Point(513, 409);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(73, 30);
+			this->label9->TabIndex = 15;
+			this->label9->Text = L"盞絏";
+			// 
+			// label8
+			// 
+			this->label8->AutoSize = true;
+			this->label8->Location = System::Drawing::Point(513, 228);
+			this->label8->Name = L"label8";
+			this->label8->Size = System::Drawing::Size(73, 30);
+			this->label8->TabIndex = 14;
+			this->label8->Text = L"眀腹";
+			// 
+			// account
+			// 
+			this->account->Location = System::Drawing::Point(716, 215);
+			this->account->Name = L"account";
+			this->account->Size = System::Drawing::Size(335, 43);
+			this->account->TabIndex = 13;
+			// 
+			// sell
+			// 
+			this->sell->Controls->Add(this->button7);
+			this->sell->Controls->Add(this->dataGridView2);
+			this->sell->Controls->Add(this->textBox9);
+			this->sell->Controls->Add(this->textBox10);
+			this->sell->Controls->Add(this->textBox11);
+			this->sell->Controls->Add(this->label10);
+			this->sell->Controls->Add(this->label11);
+			this->sell->Controls->Add(this->label12);
+			this->sell->Location = System::Drawing::Point(53, 26);
+			this->sell->Name = L"sell";
+			this->sell->Size = System::Drawing::Size(1743, 932);
+			this->sell->TabIndex = 14;
+			// 
+			// button7
+			// 
+			this->button7->Location = System::Drawing::Point(322, 537);
+			this->button7->Name = L"button7";
+			this->button7->Size = System::Drawing::Size(208, 82);
+			this->button7->TabIndex = 18;
+			this->button7->Text = L"絋粄";
+			this->button7->UseVisualStyleBackColor = true;
+			// 
+			// dataGridView2
+			// 
+			this->dataGridView2->ColumnHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::Single;
+			this->dataGridView2->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView2->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(4) {
+				this->s基, this->s珇,
+					this->s计秖, this->s癘
+			});
+			this->dataGridView2->Location = System::Drawing::Point(903, 27);
+			this->dataGridView2->Name = L"dataGridView2";
+			this->dataGridView2->RowHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
+			this->dataGridView2->RowHeadersVisible = false;
+			this->dataGridView2->RowTemplate->Height = 45;
+			this->dataGridView2->Size = System::Drawing::Size(539, 623);
+			this->dataGridView2->TabIndex = 17;
+			// 
+			// s基
+			// 
+			this->s基->HeaderText = L"基";
+			this->s基->Name = L"s基";
+			// 
+			// s珇
+			// 
+			this->s珇->HeaderText = L"珇";
+			this->s珇->Name = L"s珇";
+			// 
+			// s计秖
+			// 
+			this->s计秖->HeaderText = L"计秖";
+			this->s计秖->Name = L"s计秖";
+			// 
+			// s癘
+			// 
+			this->s癘->HeaderText = L"癘";
+			this->s癘->Name = L"s癘";
+			// 
+			// textBox9
+			// 
+			this->textBox9->AcceptsTab = true;
+			this->textBox9->Location = System::Drawing::Point(275, 306);
+			this->textBox9->Name = L"textBox9";
+			this->textBox9->Size = System::Drawing::Size(435, 43);
+			this->textBox9->TabIndex = 16;
+			// 
+			// textBox10
+			// 
+			this->textBox10->AcceptsTab = true;
+			this->textBox10->Location = System::Drawing::Point(275, 390);
+			this->textBox10->Name = L"textBox10";
+			this->textBox10->Size = System::Drawing::Size(435, 43);
+			this->textBox10->TabIndex = 15;
+			// 
+			// textBox11
+			// 
+			this->textBox11->AcceptsTab = true;
+			this->textBox11->Location = System::Drawing::Point(275, 221);
+			this->textBox11->Name = L"textBox11";
+			this->textBox11->Size = System::Drawing::Size(435, 43);
+			this->textBox11->TabIndex = 14;
+			// 
+			// label10
+			// 
+			this->label10->AutoSize = true;
+			this->label10->Location = System::Drawing::Point(156, 306);
+			this->label10->Name = L"label10";
+			this->label10->Size = System::Drawing::Size(73, 30);
+			this->label10->TabIndex = 9;
+			this->label10->Text = L"基";
+			// 
+			// label11
+			// 
+			this->label11->AutoSize = true;
+			this->label11->Location = System::Drawing::Point(156, 390);
+			this->label11->Name = L"label11";
+			this->label11->Size = System::Drawing::Size(73, 30);
+			this->label11->TabIndex = 8;
+			this->label11->Text = L"计秖";
+			// 
+			// label12
+			// 
+			this->label12->AutoSize = true;
+			this->label12->Location = System::Drawing::Point(156, 221);
+			this->label12->Name = L"label12";
+			this->label12->Size = System::Drawing::Size(73, 30);
+			this->label12->TabIndex = 7;
+			this->label12->Text = L"珇";
+			// 
 			// Form1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(16, 30);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(2216, 992);
-			this->Controls->Add(this->panel1);
+			this->ClientSize = System::Drawing::Size(2608, 1187);
+			this->Controls->Add(this->sell);
 			this->Controls->Add(this->button5);
 			this->Controls->Add(this->button4);
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button2);
+			this->Controls->Add(this->purchase);
+			this->Controls->Add(this->search);
+			this->Controls->Add(this->login);
 			this->MinimizeBox = false;
 			this->Name = L"Form1";
 			this->Text = L"Form1";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
-			this->panel1->ResumeLayout(false);
-			this->panel1->PerformLayout();
-			this->panel2->ResumeLayout(false);
-			this->panel2->PerformLayout();
+			this->search->ResumeLayout(false);
+			this->search->PerformLayout();
+			this->purchase->ResumeLayout(false);
+			this->purchase->PerformLayout();
+			this->login->ResumeLayout(false);
+			this->login->PerformLayout();
+			this->sell->ResumeLayout(false);
+			this->sell->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->EndInit();
 			this->ResumeLayout(false);
 
 		}
@@ -588,21 +817,25 @@ private: System::Void button6_Click(System::Object^  sender, System::EventArgs^ 
 	
 		try
 		{
-			if (same) {
+			
 				/* 硈挡秨币 */
 				connect->Open();
 
 				/* 肚癳 MySQL */
 				//
+				if (same && !foodcheck->Checked)
+					strSQL = "update 獽坝┍╰参 set 计秖 = 计秖+" + textBox7->Text + " where 珇='" + textBox2->Text + "';";//MySQL command you want to use															   //
+				else
+					strSQL = "insert into 獽坝┍╰参(珇,基,计秖,┍丁,戳ら,瞚豆丁,放) values ('" + textBox2->Text + "'," + textBox8->Text + "," + textBox7->Text + ",'" + textBox6->Text + "','" + textBox5->Text + "'," + textBox4->Text + "," + textBox3->Text + ");";
 
-				strSQL = "update 獽坝┍╰参 set 计秖 = 计秖+"+ textBox7->Text +" where 珇='" + textBox2->Text + "';";//MySQL command you want to use															   //
+				
 				cmd = gcnew MySqlCommand(strSQL, connect);
 				reader = cmd->ExecuteReader();
 				connect->Close();
 				System::Windows::Forms::DialogResult result;
 				result = MessageBox::Show("穝糤Θ");
 				delete cmd;
-			}
+			
 		}
 		catch (Exception ^ex)
 		{
@@ -616,12 +849,20 @@ private: System::Void button6_Click(System::Object^  sender, System::EventArgs^ 
 	
 }
 private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
-	panel1->Visible = true;
-	panel2->Visible = false;
+	search->Visible = true;
+	sell->Visible = false;
+	purchase->Visible = false;
 }
 private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
-	panel1->Visible = false;
-	panel2->Visible = true;
+	
+	purchase->Visible = true;
+	sell->Visible = false;
+	search->Visible = false;
+}
+private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e) {
+	sell->Visible = true;
+	purchase->Visible = false;
+	search->Visible = false;
 }
 };
 }
