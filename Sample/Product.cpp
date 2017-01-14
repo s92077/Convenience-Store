@@ -116,6 +116,51 @@ void Product::search_product(MySqlConnection^ connect, ComboBox ^ comboBox1, Che
 			delete cmd;
 		}
 }
+void Product::search_sell_proudct(MySqlConnection^ connect, TextBox^ textBox1, TextBox^ textBox2, DataGridView^ dataGridView1)
+{
+	bool same = false;
+	for(int i=0;i<dataGridView1->Rows->Count;i++)
+		if (Convert::ToInt32(dataGridView1->Rows[i]->Cells[0]->Value) == Convert::ToInt32(textBox1->Text))
+		{
+			dataGridView1->Rows[i]->Cells[3]->Value = Convert::ToString(Convert::ToInt32(dataGridView1->Rows[i]->Cells[3]->Value) + Convert::ToInt32(textBox2->Text));
+			dataGridView1->Rows[i]->Cells[4]->Value = Convert::ToString(Convert::ToInt32(dataGridView1->Rows[i]->Cells[2]->Value) * Convert::ToInt32(textBox2->Text)+ Convert::ToInt32(dataGridView1->Rows[i]->Cells[4]->Value));
+			same = true;
+		}
+	int sum=1;
+	if(!same)
+	try
+	{
+		/* 連結開啟 */
+		connect->Open();
+		/* 傳送指令到 MySQL */
+		//
+		strSQL = "SELECT * FROM 便利商店系統 WHERE 流水號" + " = " + textBox1->Text + ";";
+		//
+		cmd = gcnew MySqlCommand(strSQL, connect);
+		reader = cmd->ExecuteReader();
+		reader->Read();
+		
+		sum = (Convert::ToInt32(textBox2->Text))*(Convert::ToInt32(reader->GetString(2)));
+		/* 讀取資料 */
+		dataGridView1->Rows->Add();
+		int i = dataGridView1->Rows->Count-1;
+		dataGridView1->Rows[i]->Cells[0]->Value = Convert::ToInt32(textBox1->Text);
+		dataGridView1->Rows[i]->Cells[1]->Value = reader->GetString(1);
+		dataGridView1->Rows[i]->Cells[2]->Value = reader->GetString(2);
+		dataGridView1->Rows[i]->Cells[3]->Value = textBox2->Text;
+		dataGridView1->Rows[i]->Cells[4]->Value = Convert::ToString(sum);
+		/* 連結關閉 */
+		connect->Close();
+		delete cmd;
+	}
+	catch (Exception ^ex)
+	{
+		System::Windows::Forms::DialogResult result;
+		result = MessageBox::Show(ex->ToString());
+		connect->Close();
+		delete cmd;
+	}
+}
 void Product::stock(MySqlConnection ^ connect)
 {
 	bool same = false;
@@ -126,10 +171,8 @@ void Product::stock(MySqlConnection ^ connect)
 
 		/* 傳送指令到 MySQL */
 		//
-		strSQL = "SELECT * FROM 便利商店系統 WHERE 品名= '" + productname + "'";//MySQL command you want to use
-																		   //
+		strSQL = "SELECT * FROM 便利商店系統 WHERE 品名= '" + productname + "'";//MySQL command you want to use																   //
 		cmd = gcnew MySqlCommand(strSQL, connect);
-
 		reader = cmd->ExecuteReader();
 		if (reader->Read())
 			same = true;
@@ -174,6 +217,33 @@ void Product::stock(MySqlConnection ^ connect)
 		connect->Close();
 		delete cmd;
 	}
+}
+void Product::sell_product(MySqlConnection^ connect,String^sn, String^n) {
+	try
+	{
+		/* 連結開啟 */
+		connect->Open();
+		/* 傳送指令到 MySQL */
+		//
+		strSQL = "update 便利商店系統 set 數量 = 數量-" + n + " where 流水號=" + sn + ";";//MySQL command you want to use
+		//
+		cmd = gcnew MySqlCommand(strSQL, connect);
+		reader = cmd->ExecuteReader();
+		reader->Read();
+		/* 讀取資料 */
+		/* 連結關閉 */
+		connect->Close();
+		delete cmd;
+
+	}
+	catch (Exception ^ex)
+	{
+		System::Windows::Forms::DialogResult result;
+		result = MessageBox::Show(ex->ToString());
+		connect->Close();
+		delete cmd;
+	}
+
 }
 inline SYSTEMTIME& Product::get_arvaltime() {
 	return *(this->arval_date);
