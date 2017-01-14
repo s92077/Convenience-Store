@@ -24,6 +24,8 @@ public:
 	void set_price(int);
 	void set_number(int);
 	void search_product(MySqlConnection^ connect, ComboBox^ comboBox1, CheckBox^ checkBox1, TextBox^ textBox1, DataGridView^ dataGridView1);
+	void search_sell_proudct(MySqlConnection^ connect, TextBox^ textBox1, TextBox^ textBox2, DataGridView^ dataGridView1);
+	void sell_product(MySqlConnection^ connect,String^sn, String^ n);
 	void stock(MySqlConnection^ connect);
 	~Product();
 protected:
