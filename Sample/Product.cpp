@@ -60,6 +60,121 @@ inline void Product::set_onshelftime_current() {
 void Product::set_price(int price) {
 	this->price = price;
 }
+void Product::set_number(int num)
+{
+	this->product_num = num;
+}
+void Product::search_product(MySqlConnection^ connect, ComboBox ^ comboBox1, CheckBox ^ checkBox1, TextBox ^ textBox1, DataGridView ^ dataGridView1)
+{
+	try
+		{
+			/* 連結開啟 */
+			connect->Open();
+			dataGridView1->Rows->Clear();
+			dataGridView1->Refresh();
+			/* 傳送指令到 MySQL */
+			//
+			if(comboBox1->SelectedItem=="顯示全部")
+				strSQL = "select * from 便利商店系統;";//MySQL command you want to use
+			else if(comboBox1->SelectedItem == "品名")
+			{
+				if(checkBox1->Checked)
+					strSQL = "SELECT * FROM 便利商店系統 WHERE " + comboBox1->SelectedItem + " = '" + textBox1->Text + "'";
+				else
+					strSQL ="SELECT * FROM 便利商店系統 WHERE "+ comboBox1->SelectedItem +" LIKE '%%"+textBox1->Text+"%%'";
+			}		
+			else
+				strSQL = "SELECT * FROM 便利商店系統 WHERE " + comboBox1->SelectedItem + " = '" + textBox1->Text + "'";
+
+			//
+			cmd = gcnew MySqlCommand(strSQL, connect);
+			reader = cmd->ExecuteReader();
+
+			/* 讀取資料 */
+			int j = 0;
+			while (reader->Read())
+			{
+				dataGridView1->Rows->Add();
+				for (int i = 0; i<reader->FieldCount; i++)
+				{
+					String ^read = reader->GetString(i);
+					
+					dataGridView1->Rows[j]->Cells[i]->Value = read;
+				}
+				j++;
+			}
+
+			/* 連結關閉 */
+			connect->Close();
+			delete cmd;
+		}
+		catch (Exception ^ex)
+		{
+			System::Windows::Forms::DialogResult result;
+			result = MessageBox::Show(ex->ToString());
+			connect->Close();
+			delete cmd;
+		}
+}
+void Product::stock(MySqlConnection ^ connect)
+{
+	bool same = false;
+	try
+	{
+		/* 連結開啟 */
+		connect->Open();
+
+		/* 傳送指令到 MySQL */
+		//
+		strSQL = "SELECT * FROM 便利商店系統 WHERE 品名= '" + productname + "'";//MySQL command you want to use
+																		   //
+		cmd = gcnew MySqlCommand(strSQL, connect);
+
+		reader = cmd->ExecuteReader();
+		if (reader->Read())
+			same = true;
+		connect->Close();
+		delete cmd;
+	}
+	catch (Exception ^ex)
+	{
+		System::Windows::Forms::DialogResult result;
+		result = MessageBox::Show(ex->ToString());
+		connect->Close();
+		delete cmd;
+	}
+
+
+	try
+	{
+		System::String^ arvalstr=timetostring(*arval_date);
+		
+		/* 連結開啟 */
+		connect->Open();
+
+		/* 傳送指令到 MySQL */
+		//
+		if (same)
+			strSQL = "update 便利商店系統 set 數量 = 數量+" + product_num + " where 品名='" + productname + "';";//MySQL command you want to use															   //
+		else
+			strSQL = "insert into 便利商店系統(品名,價格,數量,到店時間,到期日,烹飪時間,溫度,類別) values ('" + productname + "'," + price.ToString() + "," + product_num.ToString() + "," + arvalstr + ",'" + "1900/1/0" + "'," + "0" + "," + "0" + "," + "'日用品'"+");";
+
+		cmd = gcnew MySqlCommand(strSQL, connect);
+		reader = cmd->ExecuteReader();
+		connect->Close();
+		System::Windows::Forms::DialogResult result;
+		result = MessageBox::Show("新增成功");
+		delete cmd;
+
+	}
+	catch (Exception ^ex)
+	{
+		System::Windows::Forms::DialogResult result;
+		result = MessageBox::Show(ex->ToString());
+		connect->Close();
+		delete cmd;
+	}
+}
 inline SYSTEMTIME& Product::get_arvaltime() {
 	return *(this->arval_date);
 }
@@ -75,4 +190,13 @@ Product::~Product()
 		delete[] arval_date;
 	if (this->onshelf_date)
 		delete[] onshelf_date;
+}
+
+System::String ^ Product::timetostring(SYSTEMTIME t)
+{
+	System::String^ str="";
+	int year = t.wYear, month = t.wMonth, day = t.wDay;
+	str = "'" + year + "/" + month + "/" + day + "'";
+	return str;
+	// TODO: 於此處插入傳回陳述式
 }

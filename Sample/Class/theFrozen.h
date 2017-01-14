@@ -11,6 +11,7 @@ public:
 	theFrozen(uint32_t id, System::String^ name, SYSTEMTIME arval, SYSTEMTIME onshelf, SYSTEMTIME expired, int price, int temp);
 	void set_temperature(int temp);
 	int get_temperature();
+	void stock(MySqlConnection^ connect);
 private:
 	int temperature;
 };

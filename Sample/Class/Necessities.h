@@ -2,7 +2,7 @@
 #define NECESSITIES
 #include"Product.h"
 
-class Necessities:public Product
+ref class Necessities:public Product
 {
 public:
 	Necessities();

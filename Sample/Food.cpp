@@ -31,6 +31,63 @@ void Food::set_expiredtime(int year, int month, int day, int hour, int minute, i
 inline SYSTEMTIME& Food::get_expiredtime() {
 	return *(this->expired_date);
 }
+void Food::stock(MySqlConnection ^ connect)
+{
+		bool same = false;
+		try
+		{
+			/* 連結開啟 */
+			connect->Open();
+
+			/* 傳送指令到 MySQL */
+			//
+			strSQL = "SELECT * FROM 便利商店系統 WHERE 品名= '" + productname + "'";//MySQL command you want to use
+																			   //
+			cmd = gcnew MySqlCommand(strSQL, connect);
+
+			reader = cmd->ExecuteReader();
+			if (reader->Read())
+				same = true;
+			connect->Close();
+			delete cmd;
+		}
+		catch (Exception ^ex)
+		{
+			System::Windows::Forms::DialogResult result;
+			result = MessageBox::Show(ex->ToString());
+			connect->Close();
+			delete cmd;
+		}
+
+
+		try
+		{
+			System::String^ arvalstr = timetostring(*arval_date);
+			System::String^ expiredstr = timetostring(*expired_date);
+			/* 連結開啟 */
+			connect->Open();
+
+			/* 傳送指令到 MySQL */
+			//
+			strSQL = "insert into 便利商店系統(品名,價格,數量,到店時間,到期日,烹飪時間,溫度,類別) values ('" + productname + "'," + price.ToString() + "," + product_num.ToString() + "," + arvalstr + "," + expiredstr + "," + "0" + "," + "25" + "," + "'食品'" + ");";
+
+
+			cmd = gcnew MySqlCommand(strSQL, connect);
+			reader = cmd->ExecuteReader();
+			connect->Close();
+			System::Windows::Forms::DialogResult result;
+			result = MessageBox::Show("新增成功");
+			delete cmd;
+
+		}
+		catch (Exception ^ex)
+		{
+			System::Windows::Forms::DialogResult result;
+			result = MessageBox::Show(ex->ToString());
+			connect->Close();
+			delete cmd;
+		}
+}
 Food::~Food()
 {
 	if (this->expired_date != nullptr) {

@@ -11,8 +11,9 @@ public:
 	Food(uint32_t id, System::String^ name, SYSTEMTIME arval, SYSTEMTIME onshelf, SYSTEMTIME expired, int price);
 	void set_expiredtime(int year, int month, int day, int hour, int minute, int second);
 	SYSTEMTIME& get_expiredtime();
+	void stock(MySqlConnection^ connect);
 	~Food();
-private:
+protected:
 	SYSTEMTIME *expired_date;
 };
 
