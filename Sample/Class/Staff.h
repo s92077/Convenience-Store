@@ -14,6 +14,8 @@ public:
 	Staff(String^, String^, String^, String^);
 	void staff_search(MySqlConnection^ connect, ComboBox ^ comboBox1, CheckBox ^ checkBox1, TextBox ^ textBox1, DataGridView ^ dataGridView1);
 	void staff_getinfo(MySqlConnection^ connect, TextBox ^ textBox1,Label^ label1, Label^ label2, Label^ label3);
+	void staff_change(MySqlConnection^ connect,TextBox ^ textBox1, TextBox ^ textBox2, TextBox ^ textBox3, TextBox ^ textBox4, TextBox ^ textBox5, TextBox ^ textBox6);
+	void staff_fired(MySqlConnection^ connect, TextBox ^ textBox1);
 	/*void staff_add(MySqlConnection^ connect);
 	void staff_fired();
 	void staff_change();*/
