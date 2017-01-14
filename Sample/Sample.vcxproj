@@ -96,7 +96,6 @@
     <ClCompile Include="Food.cpp" />
     <ClCompile Include="Product.cpp" />
     <ClCompile Include="Sample.cpp" />
-    <ClCompile Include="Staff.cpp" />
     <ClCompile Include="theCooked.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
