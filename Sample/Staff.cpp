@@ -135,7 +135,6 @@ void Staff::staff_change(MySqlConnection^ connect,TextBox ^ textBox1, TextBox ^ 
 		}
 		else 
 			strSQL = "insert into 人員(帳號,密碼,姓名,排班,薪資,職位) values ('" + textBox1->Text + "','" + textBox2->Text + "','" + textBox3->Text + "','" + textBox4->Text + "','" + textBox5->Text + "','" + textBox6->Text + "');";
-		textBox6->Text = strSQL;
 		cmd = gcnew MySqlCommand(strSQL, connect);
 		reader = cmd->ExecuteReader();
 		connect->Close();
