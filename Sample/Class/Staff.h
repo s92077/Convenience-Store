@@ -16,6 +16,7 @@ public:
 	void staff_getinfo(MySqlConnection^ connect, TextBox ^ textBox1,Label^ label1, Label^ label2, Label^ label3);
 	void staff_change(MySqlConnection^ connect,TextBox ^ textBox1, TextBox ^ textBox2, TextBox ^ textBox3, TextBox ^ textBox4, TextBox ^ textBox5, TextBox ^ textBox6);
 	void staff_fired(MySqlConnection^ connect, TextBox ^ textBox1);
+	void get_schedule(MySqlConnection^ connect, DataGridView ^dataGridView4, int year, int month);
 	/*void staff_add(MySqlConnection^ connect);
 	void staff_fired();
 	void staff_change();*/

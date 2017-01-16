@@ -31,6 +31,43 @@ void Staff::staff_fired(MySqlConnection^ connect, TextBox ^ textBox1)
 		delete cmd;
 	}
 }
+void Staff::get_schedule(MySqlConnection ^ connect, DataGridView ^dataGridView4, int year, int month)
+{
+	try
+	{
+		/* 連結開啟 */
+		connect->Open();
+		/* 傳送指令到 MySQL */
+		//
+		strSQL = "select * from s201701;";//MySQL command you want to use
+																	 //textBox1->Text = strSQL;																 //
+		cmd = gcnew MySqlCommand(strSQL, connect);
+		reader = cmd->ExecuteReader();
+		int j = 0;
+		/* 讀取資料 */
+		while (reader->Read())
+		{
+			dataGridView4->Rows->Add();
+			for (int i = 0; i<reader->FieldCount; i++)
+			{
+				String ^read = reader->GetString(i);
+
+				dataGridView4->Rows[j]->Cells[i]->Value = read;
+			}
+			j++;
+		}
+		/* 連結關閉 */
+		connect->Close();
+		delete cmd;
+	}
+	catch (Exception ^ex)
+	{
+		System::Windows::Forms::DialogResult result;
+		result = MessageBox::Show(ex->ToString());
+		connect->Close();
+		delete cmd;
+	}
+}
 void Staff::staff_change(MySqlConnection^ connect,TextBox ^ textBox1, TextBox ^ textBox2, TextBox ^ textBox3, TextBox ^ textBox4, TextBox ^ textBox5, TextBox ^ textBox6)
 {
 	bool same = false;

@@ -32,7 +32,7 @@ namespace Sample {
 			String ^strSQL;
 			server = "localhost";
 			userID = "root";
-			password = "0410753";
+			password = "root";
 			connectstr = "Network Address=" + server + ";" + "Persist Security Info=no;" + "User Name=" + userID + ";" + "Password=" + password + ";";
 			connect = gcnew MySqlConnection(connectstr);
 			try
@@ -146,8 +146,8 @@ namespace Sample {
 	private: System::Windows::Forms::Button^  button6;
 	private: System::Windows::Forms::TextBox^  textBox8;
 	private: System::Windows::Forms::TextBox^  textBox7;
-	private: System::Windows::Forms::TextBox^  textBox6;
-	private: System::Windows::Forms::TextBox^  textBox5;
+
+
 	private: System::Windows::Forms::TextBox^  textBox4;
 	private: System::Windows::Forms::TextBox^  textBox3;
 
@@ -239,6 +239,47 @@ private: System::Windows::Forms::TextBox^  textBox13;
 private: System::Windows::Forms::Button^  button15;
 private: System::Windows::Forms::Button^  button17;
 private: System::Windows::Forms::Button^  button16;
+private: System::Windows::Forms::Panel^  panel1;
+private: System::Windows::Forms::DataGridView^  dataGridView4;
+
+
+
+
+
+
+
+private: System::Windows::Forms::Button^  button19;
+private: System::Windows::Forms::TextBox^  textBox19;
+private: System::Windows::Forms::Button^  button18;
+private: System::Windows::Forms::Button^  button20;
+private: System::Windows::Forms::CheckedListBox^  checkedListBox1;
+private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
+private: System::Windows::Forms::DateTimePicker^  dateTimePicker1;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -311,8 +352,6 @@ private: System::Windows::Forms::Button^  button16;
 				 this->button6 = (gcnew System::Windows::Forms::Button());
 				 this->textBox8 = (gcnew System::Windows::Forms::TextBox());
 				 this->textBox7 = (gcnew System::Windows::Forms::TextBox());
-				 this->textBox6 = (gcnew System::Windows::Forms::TextBox());
-				 this->textBox5 = (gcnew System::Windows::Forms::TextBox());
 				 this->textBox4 = (gcnew System::Windows::Forms::TextBox());
 				 this->textBox3 = (gcnew System::Windows::Forms::TextBox());
 				 this->label7 = (gcnew System::Windows::Forms::Label());
@@ -353,6 +392,15 @@ private: System::Windows::Forms::Button^  button16;
 				 this->label17 = (gcnew System::Windows::Forms::Label());
 				 this->label18 = (gcnew System::Windows::Forms::Label());
 				 this->label19 = (gcnew System::Windows::Forms::Label());
+				 this->panel1 = (gcnew System::Windows::Forms::Panel());
+				 this->checkedListBox1 = (gcnew System::Windows::Forms::CheckedListBox());
+				 this->button20 = (gcnew System::Windows::Forms::Button());
+				 this->button19 = (gcnew System::Windows::Forms::Button());
+				 this->textBox19 = (gcnew System::Windows::Forms::TextBox());
+				 this->dataGridView4 = (gcnew System::Windows::Forms::DataGridView());
+				 this->button18 = (gcnew System::Windows::Forms::Button());
+				 this->dateTimePicker1 = (gcnew System::Windows::Forms::DateTimePicker());
+				 this->dateTimePicker2 = (gcnew System::Windows::Forms::DateTimePicker());
 				 (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 				 this->search->SuspendLayout();
 				 this->member->SuspendLayout();
@@ -361,22 +409,24 @@ private: System::Windows::Forms::Button^  button16;
 				 this->login->SuspendLayout();
 				 this->sell->SuspendLayout();
 				 (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->BeginInit();
+				 this->panel1->SuspendLayout();
+				 (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView4))->BeginInit();
 				 this->SuspendLayout();
 				 // 
 				 // textBox1
 				 // 
-				 this->textBox1->Location = System::Drawing::Point(232, 12);
-				 this->textBox1->Margin = System::Windows::Forms::Padding(4);
+				 this->textBox1->Location = System::Drawing::Point(87, 5);
+				 this->textBox1->Margin = System::Windows::Forms::Padding(2);
 				 this->textBox1->Name = L"textBox1";
-				 this->textBox1->Size = System::Drawing::Size(976, 43);
+				 this->textBox1->Size = System::Drawing::Size(368, 22);
 				 this->textBox1->TabIndex = 0;
 				 // 
 				 // button1
 				 // 
-				 this->button1->Location = System::Drawing::Point(1324, 12);
-				 this->button1->Margin = System::Windows::Forms::Padding(4);
+				 this->button1->Location = System::Drawing::Point(496, 5);
+				 this->button1->Margin = System::Windows::Forms::Padding(2);
 				 this->button1->Name = L"button1";
-				 this->button1->Size = System::Drawing::Size(172, 64);
+				 this->button1->Size = System::Drawing::Size(64, 26);
 				 this->button1->TabIndex = 1;
 				 this->button1->Text = L"查詢";
 				 this->button1->UseVisualStyleBackColor = true;
@@ -385,10 +435,10 @@ private: System::Windows::Forms::Button^  button16;
 				 // comboBox1
 				 // 
 				 this->comboBox1->FormattingEnabled = true;
-				 this->comboBox1->Location = System::Drawing::Point(16, 12);
-				 this->comboBox1->Margin = System::Windows::Forms::Padding(4);
+				 this->comboBox1->Location = System::Drawing::Point(6, 5);
+				 this->comboBox1->Margin = System::Windows::Forms::Padding(2);
 				 this->comboBox1->Name = L"comboBox1";
-				 this->comboBox1->Size = System::Drawing::Size(192, 38);
+				 this->comboBox1->Size = System::Drawing::Size(74, 20);
 				 this->comboBox1->TabIndex = 3;
 				 // 
 				 // dataGridView1
@@ -399,12 +449,12 @@ private: System::Windows::Forms::Button^  button16;
 					 this->流水號, this->品名,
 						 this->價格, this->數量, this->到店時間, this->到期日, this->烹飪時間, this->溫度, this->類別
 				 });
-				 this->dataGridView1->Location = System::Drawing::Point(16, 122);
-				 this->dataGridView1->Margin = System::Windows::Forms::Padding(4);
+				 this->dataGridView1->Location = System::Drawing::Point(6, 49);
+				 this->dataGridView1->Margin = System::Windows::Forms::Padding(2);
 				 this->dataGridView1->Name = L"dataGridView1";
 				 this->dataGridView1->RowHeadersVisible = false;
 				 this->dataGridView1->RowTemplate->Height = 45;
-				 this->dataGridView1->Size = System::Drawing::Size(1640, 710);
+				 this->dataGridView1->Size = System::Drawing::Size(615, 284);
 				 this->dataGridView1->TabIndex = 4;
 				 // 
 				 // 流水號
@@ -419,49 +469,49 @@ private: System::Windows::Forms::Button^  button16;
 				 this->品名->DefaultCellStyle = dataGridViewCellStyle1;
 				 this->品名->HeaderText = L"品名";
 				 this->品名->Name = L"品名";
-				 this->品名->Width = 127;
+				 this->品名->Width = 54;
 				 // 
 				 // 價格
 				 // 
 				 this->價格->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
 				 this->價格->HeaderText = L"價格";
 				 this->價格->Name = L"價格";
-				 this->價格->Width = 127;
+				 this->價格->Width = 54;
 				 // 
 				 // 數量
 				 // 
 				 this->數量->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
 				 this->數量->HeaderText = L"數量";
 				 this->數量->Name = L"數量";
-				 this->數量->Width = 127;
+				 this->數量->Width = 54;
 				 // 
 				 // 到店時間
 				 // 
 				 this->到店時間->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
 				 this->到店時間->HeaderText = L"到店時間";
 				 this->到店時間->Name = L"到店時間";
-				 this->到店時間->Width = 187;
+				 this->到店時間->Width = 78;
 				 // 
 				 // 到期日
 				 // 
 				 this->到期日->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
 				 this->到期日->HeaderText = L"到期日";
 				 this->到期日->Name = L"到期日";
-				 this->到期日->Width = 157;
+				 this->到期日->Width = 66;
 				 // 
 				 // 烹飪時間
 				 // 
 				 this->烹飪時間->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
 				 this->烹飪時間->HeaderText = L"烹飪時間";
 				 this->烹飪時間->Name = L"烹飪時間";
-				 this->烹飪時間->Width = 187;
+				 this->烹飪時間->Width = 78;
 				 // 
 				 // 溫度
 				 // 
 				 this->溫度->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
 				 this->溫度->HeaderText = L"溫度";
 				 this->溫度->Name = L"溫度";
-				 this->溫度->Width = 127;
+				 this->溫度->Width = 54;
 				 // 
 				 // 類別
 				 // 
@@ -471,10 +521,10 @@ private: System::Windows::Forms::Button^  button16;
 				 // checkBox1
 				 // 
 				 this->checkBox1->AutoSize = true;
-				 this->checkBox1->Location = System::Drawing::Point(16, 62);
-				 this->checkBox1->Margin = System::Windows::Forms::Padding(4);
+				 this->checkBox1->Location = System::Drawing::Point(6, 25);
+				 this->checkBox1->Margin = System::Windows::Forms::Padding(2);
 				 this->checkBox1->Name = L"checkBox1";
-				 this->checkBox1->Size = System::Drawing::Size(171, 34);
+				 this->checkBox1->Size = System::Drawing::Size(72, 16);
 				 this->checkBox1->TabIndex = 6;
 				 this->checkBox1->Text = L"完全符合";
 				 this->checkBox1->UseVisualStyleBackColor = true;
@@ -482,10 +532,10 @@ private: System::Windows::Forms::Button^  button16;
 				 // button2
 				 // 
 				 this->button2->Enabled = false;
-				 this->button2->Location = System::Drawing::Point(1780, 51);
-				 this->button2->Margin = System::Windows::Forms::Padding(4);
+				 this->button2->Location = System::Drawing::Point(668, 20);
+				 this->button2->Margin = System::Windows::Forms::Padding(2);
 				 this->button2->Name = L"button2";
-				 this->button2->Size = System::Drawing::Size(200, 76);
+				 this->button2->Size = System::Drawing::Size(75, 30);
 				 this->button2->TabIndex = 7;
 				 this->button2->Text = L"查詢功能";
 				 this->button2->UseVisualStyleBackColor = true;
@@ -494,10 +544,10 @@ private: System::Windows::Forms::Button^  button16;
 				 // button3
 				 // 
 				 this->button3->Enabled = false;
-				 this->button3->Location = System::Drawing::Point(1780, 307);
-				 this->button3->Margin = System::Windows::Forms::Padding(4);
+				 this->button3->Location = System::Drawing::Point(668, 123);
+				 this->button3->Margin = System::Windows::Forms::Padding(2);
 				 this->button3->Name = L"button3";
-				 this->button3->Size = System::Drawing::Size(200, 76);
+				 this->button3->Size = System::Drawing::Size(75, 30);
 				 this->button3->TabIndex = 8;
 				 this->button3->Text = L"進貨功能";
 				 this->button3->UseVisualStyleBackColor = true;
@@ -506,10 +556,10 @@ private: System::Windows::Forms::Button^  button16;
 				 // button4
 				 // 
 				 this->button4->Enabled = false;
-				 this->button4->Location = System::Drawing::Point(1780, 190);
-				 this->button4->Margin = System::Windows::Forms::Padding(4);
+				 this->button4->Location = System::Drawing::Point(668, 76);
+				 this->button4->Margin = System::Windows::Forms::Padding(2);
 				 this->button4->Name = L"button4";
-				 this->button4->Size = System::Drawing::Size(200, 76);
+				 this->button4->Size = System::Drawing::Size(75, 30);
 				 this->button4->TabIndex = 9;
 				 this->button4->Text = L"銷售功能";
 				 this->button4->UseVisualStyleBackColor = true;
@@ -518,10 +568,10 @@ private: System::Windows::Forms::Button^  button16;
 				 // button5
 				 // 
 				 this->button5->Enabled = false;
-				 this->button5->Location = System::Drawing::Point(1780, 463);
-				 this->button5->Margin = System::Windows::Forms::Padding(4);
+				 this->button5->Location = System::Drawing::Point(668, 185);
+				 this->button5->Margin = System::Windows::Forms::Padding(2);
 				 this->button5->Name = L"button5";
-				 this->button5->Size = System::Drawing::Size(200, 76);
+				 this->button5->Size = System::Drawing::Size(75, 30);
 				 this->button5->TabIndex = 10;
 				 this->button5->Text = L"人員管理";
 				 this->button5->UseVisualStyleBackColor = true;
@@ -534,10 +584,10 @@ private: System::Windows::Forms::Button^  button16;
 				 this->search->Controls->Add(this->checkBox1);
 				 this->search->Controls->Add(this->textBox1);
 				 this->search->Controls->Add(this->button1);
-				 this->search->Location = System::Drawing::Point(61, 39);
-				 this->search->Margin = System::Windows::Forms::Padding(4);
+				 this->search->Location = System::Drawing::Point(23, 16);
+				 this->search->Margin = System::Windows::Forms::Padding(2);
 				 this->search->Name = L"search";
-				 this->search->Size = System::Drawing::Size(1703, 894);
+				 this->search->Size = System::Drawing::Size(639, 358);
 				 this->search->TabIndex = 11;
 				 this->search->Visible = false;
 				 // 
@@ -564,18 +614,19 @@ private: System::Windows::Forms::Button^  button16;
 				 this->member->Controls->Add(this->checkBox2);
 				 this->member->Controls->Add(this->textBox12);
 				 this->member->Controls->Add(this->button10);
-				 this->member->Location = System::Drawing::Point(13, 11);
-				 this->member->Margin = System::Windows::Forms::Padding(4);
+				 this->member->Location = System::Drawing::Point(5, 4);
+				 this->member->Margin = System::Windows::Forms::Padding(2);
 				 this->member->Name = L"member";
-				 this->member->Size = System::Drawing::Size(1725, 894);
+				 this->member->Size = System::Drawing::Size(647, 358);
 				 this->member->TabIndex = 12;
 				 this->member->Visible = false;
 				 // 
 				 // button17
 				 // 
-				 this->button17->Location = System::Drawing::Point(1276, 754);
+				 this->button17->Location = System::Drawing::Point(478, 302);
+				 this->button17->Margin = System::Windows::Forms::Padding(1);
 				 this->button17->Name = L"button17";
-				 this->button17->Size = System::Drawing::Size(117, 64);
+				 this->button17->Size = System::Drawing::Size(44, 26);
 				 this->button17->TabIndex = 28;
 				 this->button17->Text = L"確定";
 				 this->button17->UseVisualStyleBackColor = true;
@@ -584,9 +635,10 @@ private: System::Windows::Forms::Button^  button16;
 				 // 
 				 // button16
 				 // 
-				 this->button16->Location = System::Drawing::Point(1399, 754);
+				 this->button16->Location = System::Drawing::Point(525, 302);
+				 this->button16->Margin = System::Windows::Forms::Padding(1);
 				 this->button16->Name = L"button16";
-				 this->button16->Size = System::Drawing::Size(133, 64);
+				 this->button16->Size = System::Drawing::Size(50, 26);
 				 this->button16->TabIndex = 27;
 				 this->button16->Text = L"取消";
 				 this->button16->UseVisualStyleBackColor = true;
@@ -595,9 +647,10 @@ private: System::Windows::Forms::Button^  button16;
 				 // 
 				 // button15
 				 // 
-				 this->button15->Location = System::Drawing::Point(1332, 754);
+				 this->button15->Location = System::Drawing::Point(500, 302);
+				 this->button15->Margin = System::Windows::Forms::Padding(1);
 				 this->button15->Name = L"button15";
-				 this->button15->Size = System::Drawing::Size(200, 64);
+				 this->button15->Size = System::Drawing::Size(75, 26);
 				 this->button15->TabIndex = 26;
 				 this->button15->Text = L"開除";
 				 this->button15->UseVisualStyleBackColor = true;
@@ -605,57 +658,58 @@ private: System::Windows::Forms::Button^  button16;
 				 // 
 				 // textBox17
 				 // 
-				 this->textBox17->Location = System::Drawing::Point(1060, 565);
-				 this->textBox17->Margin = System::Windows::Forms::Padding(4);
+				 this->textBox17->Location = System::Drawing::Point(398, 226);
+				 this->textBox17->Margin = System::Windows::Forms::Padding(2);
 				 this->textBox17->Name = L"textBox17";
-				 this->textBox17->Size = System::Drawing::Size(423, 43);
+				 this->textBox17->Size = System::Drawing::Size(161, 22);
 				 this->textBox17->TabIndex = 25;
 				 // 
 				 // textBox18
 				 // 
-				 this->textBox18->Location = System::Drawing::Point(1060, 656);
-				 this->textBox18->Margin = System::Windows::Forms::Padding(4);
+				 this->textBox18->Location = System::Drawing::Point(398, 262);
+				 this->textBox18->Margin = System::Windows::Forms::Padding(2);
 				 this->textBox18->Name = L"textBox18";
-				 this->textBox18->Size = System::Drawing::Size(423, 43);
+				 this->textBox18->Size = System::Drawing::Size(161, 22);
 				 this->textBox18->TabIndex = 24;
 				 // 
 				 // textBox15
 				 // 
-				 this->textBox15->Location = System::Drawing::Point(1060, 352);
-				 this->textBox15->Margin = System::Windows::Forms::Padding(4);
+				 this->textBox15->Location = System::Drawing::Point(398, 141);
+				 this->textBox15->Margin = System::Windows::Forms::Padding(2);
 				 this->textBox15->Name = L"textBox15";
-				 this->textBox15->Size = System::Drawing::Size(423, 43);
+				 this->textBox15->Size = System::Drawing::Size(161, 22);
 				 this->textBox15->TabIndex = 23;
 				 // 
 				 // textBox16
 				 // 
-				 this->textBox16->Location = System::Drawing::Point(1060, 459);
-				 this->textBox16->Margin = System::Windows::Forms::Padding(4);
+				 this->textBox16->Location = System::Drawing::Point(398, 184);
+				 this->textBox16->Margin = System::Windows::Forms::Padding(2);
 				 this->textBox16->Name = L"textBox16";
-				 this->textBox16->Size = System::Drawing::Size(423, 43);
+				 this->textBox16->Size = System::Drawing::Size(161, 22);
 				 this->textBox16->TabIndex = 22;
 				 // 
 				 // textBox14
 				 // 
-				 this->textBox14->Location = System::Drawing::Point(1060, 260);
-				 this->textBox14->Margin = System::Windows::Forms::Padding(4);
+				 this->textBox14->Location = System::Drawing::Point(398, 104);
+				 this->textBox14->Margin = System::Windows::Forms::Padding(2);
 				 this->textBox14->Name = L"textBox14";
-				 this->textBox14->Size = System::Drawing::Size(423, 43);
+				 this->textBox14->Size = System::Drawing::Size(161, 22);
 				 this->textBox14->TabIndex = 21;
 				 // 
 				 // textBox13
 				 // 
-				 this->textBox13->Location = System::Drawing::Point(1060, 170);
-				 this->textBox13->Margin = System::Windows::Forms::Padding(4);
+				 this->textBox13->Location = System::Drawing::Point(398, 68);
+				 this->textBox13->Margin = System::Windows::Forms::Padding(2);
 				 this->textBox13->Name = L"textBox13";
-				 this->textBox13->Size = System::Drawing::Size(423, 43);
+				 this->textBox13->Size = System::Drawing::Size(161, 22);
 				 this->textBox13->TabIndex = 20;
 				 // 
 				 // button14
 				 // 
-				 this->button14->Location = System::Drawing::Point(1060, 754);
+				 this->button14->Location = System::Drawing::Point(398, 302);
+				 this->button14->Margin = System::Windows::Forms::Padding(1);
 				 this->button14->Name = L"button14";
-				 this->button14->Size = System::Drawing::Size(200, 64);
+				 this->button14->Size = System::Drawing::Size(75, 26);
 				 this->button14->TabIndex = 19;
 				 this->button14->Text = L"新增/修改";
 				 this->button14->UseVisualStyleBackColor = true;
@@ -664,54 +718,60 @@ private: System::Windows::Forms::Button^  button16;
 				 // label25
 				 // 
 				 this->label25->AutoSize = true;
-				 this->label25->Location = System::Drawing::Point(974, 664);
+				 this->label25->Location = System::Drawing::Point(365, 266);
+				 this->label25->Margin = System::Windows::Forms::Padding(1, 0, 1, 0);
 				 this->label25->Name = L"label25";
-				 this->label25->Size = System::Drawing::Size(81, 30);
+				 this->label25->Size = System::Drawing::Size(32, 12);
 				 this->label25->TabIndex = 12;
 				 this->label25->Text = L"職位:";
 				 // 
 				 // label24
 				 // 
 				 this->label24->AutoSize = true;
-				 this->label24->Location = System::Drawing::Point(974, 563);
+				 this->label24->Location = System::Drawing::Point(365, 225);
+				 this->label24->Margin = System::Windows::Forms::Padding(1, 0, 1, 0);
 				 this->label24->Name = L"label24";
-				 this->label24->Size = System::Drawing::Size(81, 30);
+				 this->label24->Size = System::Drawing::Size(32, 12);
 				 this->label24->TabIndex = 11;
 				 this->label24->Text = L"薪資:";
 				 // 
 				 // label23
 				 // 
 				 this->label23->AutoSize = true;
-				 this->label23->Location = System::Drawing::Point(974, 260);
+				 this->label23->Location = System::Drawing::Point(365, 104);
+				 this->label23->Margin = System::Windows::Forms::Padding(1, 0, 1, 0);
 				 this->label23->Name = L"label23";
-				 this->label23->Size = System::Drawing::Size(81, 30);
+				 this->label23->Size = System::Drawing::Size(32, 12);
 				 this->label23->TabIndex = 10;
 				 this->label23->Text = L"密碼:";
 				 // 
 				 // label22
 				 // 
 				 this->label22->AutoSize = true;
-				 this->label22->Location = System::Drawing::Point(974, 355);
+				 this->label22->Location = System::Drawing::Point(365, 142);
+				 this->label22->Margin = System::Windows::Forms::Padding(1, 0, 1, 0);
 				 this->label22->Name = L"label22";
-				 this->label22->Size = System::Drawing::Size(81, 30);
+				 this->label22->Size = System::Drawing::Size(32, 12);
 				 this->label22->TabIndex = 9;
 				 this->label22->Text = L"姓名:";
 				 // 
 				 // label21
 				 // 
 				 this->label21->AutoSize = true;
-				 this->label21->Location = System::Drawing::Point(974, 462);
+				 this->label21->Location = System::Drawing::Point(365, 185);
+				 this->label21->Margin = System::Windows::Forms::Padding(1, 0, 1, 0);
 				 this->label21->Name = L"label21";
-				 this->label21->Size = System::Drawing::Size(81, 30);
+				 this->label21->Size = System::Drawing::Size(32, 12);
 				 this->label21->TabIndex = 8;
 				 this->label21->Text = L"排班:";
 				 // 
 				 // label20
 				 // 
 				 this->label20->AutoSize = true;
-				 this->label20->Location = System::Drawing::Point(974, 170);
+				 this->label20->Location = System::Drawing::Point(365, 68);
+				 this->label20->Margin = System::Windows::Forms::Padding(1, 0, 1, 0);
 				 this->label20->Name = L"label20";
-				 this->label20->Size = System::Drawing::Size(81, 30);
+				 this->label20->Size = System::Drawing::Size(32, 12);
 				 this->label20->TabIndex = 7;
 				 this->label20->Text = L"帳號:";
 				 // 
@@ -723,12 +783,12 @@ private: System::Windows::Forms::Button^  button16;
 					 this->dataGridViewTextBoxColumn6,
 						 this->dataGridViewTextBoxColumn2, this->dataGridViewTextBoxColumn3, this->dataGridViewTextBoxColumn4, this->dataGridViewTextBoxColumn5
 				 });
-				 this->dataGridView3->Location = System::Drawing::Point(16, 120);
-				 this->dataGridView3->Margin = System::Windows::Forms::Padding(4);
+				 this->dataGridView3->Location = System::Drawing::Point(6, 48);
+				 this->dataGridView3->Margin = System::Windows::Forms::Padding(2);
 				 this->dataGridView3->Name = L"dataGridView3";
 				 this->dataGridView3->RowHeadersVisible = false;
 				 this->dataGridView3->RowTemplate->Height = 45;
-				 this->dataGridView3->Size = System::Drawing::Size(811, 698);
+				 this->dataGridView3->Size = System::Drawing::Size(304, 279);
 				 this->dataGridView3->TabIndex = 4;
 				 // 
 				 // dataGridViewTextBoxColumn6
@@ -736,7 +796,7 @@ private: System::Windows::Forms::Button^  button16;
 				 this->dataGridViewTextBoxColumn6->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
 				 this->dataGridViewTextBoxColumn6->HeaderText = L"帳號";
 				 this->dataGridViewTextBoxColumn6->Name = L"dataGridViewTextBoxColumn6";
-				 this->dataGridViewTextBoxColumn6->Width = 127;
+				 this->dataGridViewTextBoxColumn6->Width = 54;
 				 // 
 				 // dataGridViewTextBoxColumn2
 				 // 
@@ -745,63 +805,63 @@ private: System::Windows::Forms::Button^  button16;
 				 this->dataGridViewTextBoxColumn2->DefaultCellStyle = dataGridViewCellStyle2;
 				 this->dataGridViewTextBoxColumn2->HeaderText = L"姓名";
 				 this->dataGridViewTextBoxColumn2->Name = L"dataGridViewTextBoxColumn2";
-				 this->dataGridViewTextBoxColumn2->Width = 127;
+				 this->dataGridViewTextBoxColumn2->Width = 54;
 				 // 
 				 // dataGridViewTextBoxColumn3
 				 // 
 				 this->dataGridViewTextBoxColumn3->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
 				 this->dataGridViewTextBoxColumn3->HeaderText = L"排班";
 				 this->dataGridViewTextBoxColumn3->Name = L"dataGridViewTextBoxColumn3";
-				 this->dataGridViewTextBoxColumn3->Width = 127;
+				 this->dataGridViewTextBoxColumn3->Width = 54;
 				 // 
 				 // dataGridViewTextBoxColumn4
 				 // 
 				 this->dataGridViewTextBoxColumn4->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
 				 this->dataGridViewTextBoxColumn4->HeaderText = L"薪資";
 				 this->dataGridViewTextBoxColumn4->Name = L"dataGridViewTextBoxColumn4";
-				 this->dataGridViewTextBoxColumn4->Width = 127;
+				 this->dataGridViewTextBoxColumn4->Width = 54;
 				 // 
 				 // dataGridViewTextBoxColumn5
 				 // 
 				 this->dataGridViewTextBoxColumn5->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
 				 this->dataGridViewTextBoxColumn5->HeaderText = L"職位";
 				 this->dataGridViewTextBoxColumn5->Name = L"dataGridViewTextBoxColumn5";
-				 this->dataGridViewTextBoxColumn5->Width = 127;
+				 this->dataGridViewTextBoxColumn5->Width = 54;
 				 // 
 				 // comboBox3
 				 // 
 				 this->comboBox3->FormattingEnabled = true;
-				 this->comboBox3->Location = System::Drawing::Point(16, 12);
-				 this->comboBox3->Margin = System::Windows::Forms::Padding(4);
+				 this->comboBox3->Location = System::Drawing::Point(6, 5);
+				 this->comboBox3->Margin = System::Windows::Forms::Padding(2);
 				 this->comboBox3->Name = L"comboBox3";
-				 this->comboBox3->Size = System::Drawing::Size(192, 38);
+				 this->comboBox3->Size = System::Drawing::Size(74, 20);
 				 this->comboBox3->TabIndex = 3;
 				 // 
 				 // checkBox2
 				 // 
 				 this->checkBox2->AutoSize = true;
-				 this->checkBox2->Location = System::Drawing::Point(18, 68);
-				 this->checkBox2->Margin = System::Windows::Forms::Padding(4);
+				 this->checkBox2->Location = System::Drawing::Point(7, 27);
+				 this->checkBox2->Margin = System::Windows::Forms::Padding(2);
 				 this->checkBox2->Name = L"checkBox2";
-				 this->checkBox2->Size = System::Drawing::Size(171, 34);
+				 this->checkBox2->Size = System::Drawing::Size(72, 16);
 				 this->checkBox2->TabIndex = 6;
 				 this->checkBox2->Text = L"完全符合";
 				 this->checkBox2->UseVisualStyleBackColor = true;
 				 // 
 				 // textBox12
 				 // 
-				 this->textBox12->Location = System::Drawing::Point(232, 12);
-				 this->textBox12->Margin = System::Windows::Forms::Padding(4);
+				 this->textBox12->Location = System::Drawing::Point(87, 5);
+				 this->textBox12->Margin = System::Windows::Forms::Padding(2);
 				 this->textBox12->Name = L"textBox12";
-				 this->textBox12->Size = System::Drawing::Size(976, 43);
+				 this->textBox12->Size = System::Drawing::Size(368, 22);
 				 this->textBox12->TabIndex = 0;
 				 // 
 				 // button10
 				 // 
-				 this->button10->Location = System::Drawing::Point(1238, 8);
-				 this->button10->Margin = System::Windows::Forms::Padding(4);
+				 this->button10->Location = System::Drawing::Point(464, 3);
+				 this->button10->Margin = System::Windows::Forms::Padding(2);
 				 this->button10->Name = L"button10";
-				 this->button10->Size = System::Drawing::Size(172, 64);
+				 this->button10->Size = System::Drawing::Size(64, 26);
 				 this->button10->TabIndex = 1;
 				 this->button10->Text = L"查詢";
 				 this->button10->UseVisualStyleBackColor = true;
@@ -809,13 +869,13 @@ private: System::Windows::Forms::Button^  button16;
 				 // 
 				 // purchase
 				 // 
+				 this->purchase->Controls->Add(this->dateTimePicker2);
+				 this->purchase->Controls->Add(this->dateTimePicker1);
 				 this->purchase->Controls->Add(this->label13);
 				 this->purchase->Controls->Add(this->comboBox2);
 				 this->purchase->Controls->Add(this->button6);
 				 this->purchase->Controls->Add(this->textBox8);
 				 this->purchase->Controls->Add(this->textBox7);
-				 this->purchase->Controls->Add(this->textBox6);
-				 this->purchase->Controls->Add(this->textBox5);
 				 this->purchase->Controls->Add(this->textBox4);
 				 this->purchase->Controls->Add(this->textBox3);
 				 this->purchase->Controls->Add(this->label7);
@@ -826,40 +886,40 @@ private: System::Windows::Forms::Button^  button16;
 				 this->purchase->Controls->Add(this->label2);
 				 this->purchase->Controls->Add(this->label1);
 				 this->purchase->Controls->Add(this->textBox2);
-				 this->purchase->Location = System::Drawing::Point(47, 39);
-				 this->purchase->Margin = System::Windows::Forms::Padding(4);
+				 this->purchase->Location = System::Drawing::Point(18, 16);
+				 this->purchase->Margin = System::Windows::Forms::Padding(2);
 				 this->purchase->Name = L"purchase";
-				 this->purchase->Size = System::Drawing::Size(1698, 898);
+				 this->purchase->Size = System::Drawing::Size(637, 359);
 				 this->purchase->TabIndex = 12;
 				 this->purchase->Visible = false;
 				 // 
 				 // label13
 				 // 
 				 this->label13->AutoSize = true;
-				 this->label13->Location = System::Drawing::Point(528, 628);
-				 this->label13->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+				 this->label13->Location = System::Drawing::Point(198, 251);
+				 this->label13->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 				 this->label13->Name = L"label13";
-				 this->label13->Size = System::Drawing::Size(73, 30);
+				 this->label13->Size = System::Drawing::Size(29, 12);
 				 this->label13->TabIndex = 17;
 				 this->label13->Text = L"類別";
 				 // 
 				 // comboBox2
 				 // 
 				 this->comboBox2->FormattingEnabled = true;
-				 this->comboBox2->Location = System::Drawing::Point(670, 628);
-				 this->comboBox2->Margin = System::Windows::Forms::Padding(6);
+				 this->comboBox2->Location = System::Drawing::Point(251, 251);
+				 this->comboBox2->Margin = System::Windows::Forms::Padding(2);
 				 this->comboBox2->Name = L"comboBox2";
-				 this->comboBox2->Size = System::Drawing::Size(436, 38);
+				 this->comboBox2->Size = System::Drawing::Size(166, 20);
 				 this->comboBox2->TabIndex = 16;
 				 this->comboBox2->SelectedValueChanged += gcnew System::EventHandler(this, &Form1::comboBox2_SelectedValueChanged);
 				 // 
 				 // button6
 				 // 
 				 this->button6->Font = (gcnew System::Drawing::Font(L"新細明體", 12));
-				 this->button6->Location = System::Drawing::Point(754, 720);
-				 this->button6->Margin = System::Windows::Forms::Padding(4);
+				 this->button6->Location = System::Drawing::Point(283, 288);
+				 this->button6->Margin = System::Windows::Forms::Padding(2);
 				 this->button6->Name = L"button6";
-				 this->button6->Size = System::Drawing::Size(188, 64);
+				 this->button6->Size = System::Drawing::Size(70, 26);
 				 this->button6->TabIndex = 14;
 				 this->button6->Text = L"確認";
 				 this->button6->UseVisualStyleBackColor = true;
@@ -868,134 +928,116 @@ private: System::Windows::Forms::Button^  button16;
 				 // textBox8
 				 // 
 				 this->textBox8->AcceptsTab = true;
-				 this->textBox8->Location = System::Drawing::Point(670, 136);
-				 this->textBox8->Margin = System::Windows::Forms::Padding(4);
+				 this->textBox8->Location = System::Drawing::Point(251, 54);
+				 this->textBox8->Margin = System::Windows::Forms::Padding(2);
 				 this->textBox8->Name = L"textBox8";
-				 this->textBox8->Size = System::Drawing::Size(436, 43);
+				 this->textBox8->Size = System::Drawing::Size(166, 22);
 				 this->textBox8->TabIndex = 13;
 				 // 
 				 // textBox7
 				 // 
 				 this->textBox7->AcceptsTab = true;
-				 this->textBox7->Location = System::Drawing::Point(670, 220);
-				 this->textBox7->Margin = System::Windows::Forms::Padding(4);
+				 this->textBox7->Location = System::Drawing::Point(251, 88);
+				 this->textBox7->Margin = System::Windows::Forms::Padding(2);
 				 this->textBox7->Name = L"textBox7";
-				 this->textBox7->Size = System::Drawing::Size(436, 43);
+				 this->textBox7->Size = System::Drawing::Size(166, 22);
 				 this->textBox7->TabIndex = 12;
-				 // 
-				 // textBox6
-				 // 
-				 this->textBox6->AcceptsTab = true;
-				 this->textBox6->Location = System::Drawing::Point(670, 304);
-				 this->textBox6->Margin = System::Windows::Forms::Padding(4);
-				 this->textBox6->Name = L"textBox6";
-				 this->textBox6->Size = System::Drawing::Size(436, 43);
-				 this->textBox6->TabIndex = 11;
-				 // 
-				 // textBox5
-				 // 
-				 this->textBox5->AcceptsTab = true;
-				 this->textBox5->Location = System::Drawing::Point(670, 394);
-				 this->textBox5->Margin = System::Windows::Forms::Padding(4);
-				 this->textBox5->Name = L"textBox5";
-				 this->textBox5->Size = System::Drawing::Size(436, 43);
-				 this->textBox5->TabIndex = 10;
 				 // 
 				 // textBox4
 				 // 
 				 this->textBox4->AcceptsTab = true;
-				 this->textBox4->Location = System::Drawing::Point(670, 468);
-				 this->textBox4->Margin = System::Windows::Forms::Padding(4);
+				 this->textBox4->Location = System::Drawing::Point(251, 187);
+				 this->textBox4->Margin = System::Windows::Forms::Padding(2);
 				 this->textBox4->Name = L"textBox4";
-				 this->textBox4->Size = System::Drawing::Size(436, 43);
+				 this->textBox4->Size = System::Drawing::Size(166, 22);
 				 this->textBox4->TabIndex = 9;
 				 // 
 				 // textBox3
 				 // 
 				 this->textBox3->AcceptsTab = true;
-				 this->textBox3->Location = System::Drawing::Point(670, 544);
-				 this->textBox3->Margin = System::Windows::Forms::Padding(4);
+				 this->textBox3->Location = System::Drawing::Point(251, 218);
+				 this->textBox3->Margin = System::Windows::Forms::Padding(2);
 				 this->textBox3->Name = L"textBox3";
-				 this->textBox3->Size = System::Drawing::Size(436, 43);
+				 this->textBox3->Size = System::Drawing::Size(166, 22);
 				 this->textBox3->TabIndex = 8;
 				 // 
 				 // label7
 				 // 
 				 this->label7->AutoSize = true;
-				 this->label7->Location = System::Drawing::Point(528, 550);
-				 this->label7->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+				 this->label7->Location = System::Drawing::Point(198, 220);
+				 this->label7->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 				 this->label7->Name = L"label7";
-				 this->label7->Size = System::Drawing::Size(73, 30);
+				 this->label7->Size = System::Drawing::Size(29, 12);
 				 this->label7->TabIndex = 7;
 				 this->label7->Text = L"溫度";
 				 // 
 				 // label6
 				 // 
 				 this->label6->AutoSize = true;
-				 this->label6->Location = System::Drawing::Point(528, 142);
-				 this->label6->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+				 this->label6->Location = System::Drawing::Point(198, 57);
+				 this->label6->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 				 this->label6->Name = L"label6";
-				 this->label6->Size = System::Drawing::Size(73, 30);
+				 this->label6->Size = System::Drawing::Size(29, 12);
 				 this->label6->TabIndex = 6;
 				 this->label6->Text = L"價格";
 				 // 
 				 // label5
 				 // 
 				 this->label5->AutoSize = true;
-				 this->label5->Location = System::Drawing::Point(528, 232);
-				 this->label5->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+				 this->label5->Location = System::Drawing::Point(198, 93);
+				 this->label5->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 				 this->label5->Name = L"label5";
-				 this->label5->Size = System::Drawing::Size(73, 30);
+				 this->label5->Size = System::Drawing::Size(29, 12);
 				 this->label5->TabIndex = 5;
 				 this->label5->Text = L"數量";
 				 // 
 				 // label4
 				 // 
 				 this->label4->AutoSize = true;
-				 this->label4->Location = System::Drawing::Point(528, 310);
-				 this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+				 this->label4->Location = System::Drawing::Point(198, 124);
+				 this->label4->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 				 this->label4->Name = L"label4";
-				 this->label4->Size = System::Drawing::Size(133, 30);
+				 this->label4->Size = System::Drawing::Size(53, 12);
 				 this->label4->TabIndex = 4;
 				 this->label4->Text = L"到店日期";
 				 // 
 				 // label3
 				 // 
 				 this->label3->AutoSize = true;
-				 this->label3->Location = System::Drawing::Point(528, 400);
-				 this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+				 this->label3->Location = System::Drawing::Point(198, 160);
+				 this->label3->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 				 this->label3->Name = L"label3";
-				 this->label3->Size = System::Drawing::Size(103, 30);
+				 this->label3->Size = System::Drawing::Size(41, 12);
 				 this->label3->TabIndex = 3;
 				 this->label3->Text = L"到期日";
 				 // 
 				 // label2
 				 // 
 				 this->label2->AutoSize = true;
-				 this->label2->Location = System::Drawing::Point(528, 474);
-				 this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+				 this->label2->Location = System::Drawing::Point(198, 190);
+				 this->label2->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 				 this->label2->Name = L"label2";
-				 this->label2->Size = System::Drawing::Size(133, 30);
+				 this->label2->Size = System::Drawing::Size(53, 12);
 				 this->label2->TabIndex = 2;
 				 this->label2->Text = L"烹飪時間";
 				 // 
 				 // label1
 				 // 
 				 this->label1->AutoSize = true;
-				 this->label1->Location = System::Drawing::Point(528, 58);
-				 this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+				 this->label1->Location = System::Drawing::Point(198, 23);
+				 this->label1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 				 this->label1->Name = L"label1";
-				 this->label1->Size = System::Drawing::Size(73, 30);
+				 this->label1->Size = System::Drawing::Size(29, 12);
 				 this->label1->TabIndex = 1;
 				 this->label1->Text = L"品名";
 				 // 
 				 // textBox2
 				 // 
 				 this->textBox2->AcceptsTab = true;
-				 this->textBox2->Location = System::Drawing::Point(670, 52);
-				 this->textBox2->Margin = System::Windows::Forms::Padding(4);
+				 this->textBox2->Location = System::Drawing::Point(251, 21);
+				 this->textBox2->Margin = System::Windows::Forms::Padding(2);
 				 this->textBox2->Name = L"textBox2";
-				 this->textBox2->Size = System::Drawing::Size(436, 43);
+				 this->textBox2->Size = System::Drawing::Size(166, 22);
 				 this->textBox2->TabIndex = 0;
 				 // 
 				 // login
@@ -1005,17 +1047,18 @@ private: System::Windows::Forms::Button^  button16;
 				 this->login->Controls->Add(this->label9);
 				 this->login->Controls->Add(this->label8);
 				 this->login->Controls->Add(this->account);
-				 this->login->Location = System::Drawing::Point(13, 9);
-				 this->login->Margin = System::Windows::Forms::Padding(4);
+				 this->login->Location = System::Drawing::Point(5, 4);
+				 this->login->Margin = System::Windows::Forms::Padding(2);
 				 this->login->Name = L"login";
-				 this->login->Size = System::Drawing::Size(1768, 924);
+				 this->login->Size = System::Drawing::Size(663, 370);
 				 this->login->TabIndex = 13;
 				 // 
 				 // button11
 				 // 
-				 this->button11->Location = System::Drawing::Point(716, 545);
+				 this->button11->Location = System::Drawing::Point(268, 218);
+				 this->button11->Margin = System::Windows::Forms::Padding(1);
 				 this->button11->Name = L"button11";
-				 this->button11->Size = System::Drawing::Size(161, 61);
+				 this->button11->Size = System::Drawing::Size(60, 24);
 				 this->button11->TabIndex = 17;
 				 this->button11->Text = L"登入";
 				 this->button11->UseVisualStyleBackColor = true;
@@ -1023,38 +1066,38 @@ private: System::Windows::Forms::Button^  button16;
 				 // 
 				 // passwordbox
 				 // 
-				 this->passwordbox->Location = System::Drawing::Point(716, 408);
-				 this->passwordbox->Margin = System::Windows::Forms::Padding(4);
+				 this->passwordbox->Location = System::Drawing::Point(268, 163);
+				 this->passwordbox->Margin = System::Windows::Forms::Padding(2);
 				 this->passwordbox->Name = L"passwordbox";
-				 this->passwordbox->Size = System::Drawing::Size(336, 43);
+				 this->passwordbox->Size = System::Drawing::Size(128, 22);
 				 this->passwordbox->TabIndex = 16;
 				 // 
 				 // label9
 				 // 
 				 this->label9->AutoSize = true;
-				 this->label9->Location = System::Drawing::Point(512, 408);
-				 this->label9->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+				 this->label9->Location = System::Drawing::Point(192, 163);
+				 this->label9->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 				 this->label9->Name = L"label9";
-				 this->label9->Size = System::Drawing::Size(73, 30);
+				 this->label9->Size = System::Drawing::Size(29, 12);
 				 this->label9->TabIndex = 15;
 				 this->label9->Text = L"密碼";
 				 // 
 				 // label8
 				 // 
 				 this->label8->AutoSize = true;
-				 this->label8->Location = System::Drawing::Point(512, 228);
-				 this->label8->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+				 this->label8->Location = System::Drawing::Point(192, 91);
+				 this->label8->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 				 this->label8->Name = L"label8";
-				 this->label8->Size = System::Drawing::Size(73, 30);
+				 this->label8->Size = System::Drawing::Size(29, 12);
 				 this->label8->TabIndex = 14;
 				 this->label8->Text = L"帳號";
 				 // 
 				 // account
 				 // 
-				 this->account->Location = System::Drawing::Point(716, 216);
-				 this->account->Margin = System::Windows::Forms::Padding(4);
+				 this->account->Location = System::Drawing::Point(268, 86);
+				 this->account->Margin = System::Windows::Forms::Padding(2);
 				 this->account->Name = L"account";
-				 this->account->Size = System::Drawing::Size(336, 43);
+				 this->account->Size = System::Drawing::Size(128, 22);
 				 this->account->TabIndex = 13;
 				 // 
 				 // sell
@@ -1073,18 +1116,19 @@ private: System::Windows::Forms::Button^  button16;
 				 this->sell->Controls->Add(this->textBox11);
 				 this->sell->Controls->Add(this->label11);
 				 this->sell->Controls->Add(this->label12);
-				 this->sell->Location = System::Drawing::Point(51, 39);
-				 this->sell->Margin = System::Windows::Forms::Padding(4);
+				 this->sell->Location = System::Drawing::Point(19, 16);
+				 this->sell->Margin = System::Windows::Forms::Padding(2);
 				 this->sell->Name = L"sell";
-				 this->sell->Size = System::Drawing::Size(1709, 890);
+				 this->sell->Size = System::Drawing::Size(641, 356);
 				 this->sell->TabIndex = 14;
 				 this->sell->Visible = false;
 				 // 
 				 // button13
 				 // 
-				 this->button13->Location = System::Drawing::Point(1430, 696);
+				 this->button13->Location = System::Drawing::Point(536, 278);
+				 this->button13->Margin = System::Windows::Forms::Padding(1);
 				 this->button13->Name = L"button13";
-				 this->button13->Size = System::Drawing::Size(169, 66);
+				 this->button13->Size = System::Drawing::Size(63, 26);
 				 this->button13->TabIndex = 26;
 				 this->button13->Text = L"重置";
 				 this->button13->UseVisualStyleBackColor = true;
@@ -1092,10 +1136,10 @@ private: System::Windows::Forms::Button^  button16;
 				 // 
 				 // button9
 				 // 
-				 this->button9->Location = System::Drawing::Point(221, 535);
-				 this->button9->Margin = System::Windows::Forms::Padding(4);
+				 this->button9->Location = System::Drawing::Point(83, 214);
+				 this->button9->Margin = System::Windows::Forms::Padding(2);
 				 this->button9->Name = L"button9";
-				 this->button9->Size = System::Drawing::Size(168, 59);
+				 this->button9->Size = System::Drawing::Size(63, 24);
 				 this->button9->TabIndex = 25;
 				 this->button9->Text = L"確認";
 				 this->button9->UseVisualStyleBackColor = true;
@@ -1104,51 +1148,57 @@ private: System::Windows::Forms::Button^  button16;
 				 // label16
 				 // 
 				 this->label16->AutoSize = true;
-				 this->label16->Location = System::Drawing::Point(57, 424);
+				 this->label16->Location = System::Drawing::Point(21, 170);
+				 this->label16->Margin = System::Windows::Forms::Padding(1, 0, 1, 0);
 				 this->label16->Name = L"label16";
-				 this->label16->Size = System::Drawing::Size(81, 30);
+				 this->label16->Size = System::Drawing::Size(32, 12);
 				 this->label16->TabIndex = 24;
 				 this->label16->Text = L"實收:";
 				 // 
 				 // textBox9
 				 // 
-				 this->textBox9->Location = System::Drawing::Point(221, 424);
+				 this->textBox9->Location = System::Drawing::Point(83, 170);
+				 this->textBox9->Margin = System::Windows::Forms::Padding(1);
 				 this->textBox9->Name = L"textBox9";
-				 this->textBox9->Size = System::Drawing::Size(436, 43);
+				 this->textBox9->Size = System::Drawing::Size(166, 22);
 				 this->textBox9->TabIndex = 23;
 				 // 
 				 // label15
 				 // 
 				 this->label15->AutoSize = true;
-				 this->label15->Location = System::Drawing::Point(704, 836);
+				 this->label15->Location = System::Drawing::Point(264, 334);
+				 this->label15->Margin = System::Windows::Forms::Padding(1, 0, 1, 0);
 				 this->label15->Name = L"label15";
-				 this->label15->Size = System::Drawing::Size(81, 30);
+				 this->label15->Size = System::Drawing::Size(32, 12);
 				 this->label15->TabIndex = 22;
 				 this->label15->Text = L"找零:";
 				 // 
 				 // label14
 				 // 
 				 this->label14->AutoSize = true;
-				 this->label14->Location = System::Drawing::Point(704, 778);
+				 this->label14->Location = System::Drawing::Point(264, 311);
+				 this->label14->Margin = System::Windows::Forms::Padding(1, 0, 1, 0);
 				 this->label14->Name = L"label14";
-				 this->label14->Size = System::Drawing::Size(81, 30);
+				 this->label14->Size = System::Drawing::Size(32, 12);
 				 this->label14->TabIndex = 21;
 				 this->label14->Text = L"實收:";
 				 // 
 				 // label10
 				 // 
 				 this->label10->AutoSize = true;
-				 this->label10->Location = System::Drawing::Point(704, 714);
+				 this->label10->Location = System::Drawing::Point(264, 286);
+				 this->label10->Margin = System::Windows::Forms::Padding(1, 0, 1, 0);
 				 this->label10->Name = L"label10";
-				 this->label10->Size = System::Drawing::Size(81, 30);
+				 this->label10->Size = System::Drawing::Size(32, 12);
 				 this->label10->TabIndex = 20;
 				 this->label10->Text = L"總價:";
 				 // 
 				 // button8
 				 // 
-				 this->button8->Location = System::Drawing::Point(1238, 696);
+				 this->button8->Location = System::Drawing::Point(464, 278);
+				 this->button8->Margin = System::Windows::Forms::Padding(1);
 				 this->button8->Name = L"button8";
-				 this->button8->Size = System::Drawing::Size(168, 66);
+				 this->button8->Size = System::Drawing::Size(63, 26);
 				 this->button8->TabIndex = 19;
 				 this->button8->Text = L"結帳";
 				 this->button8->UseVisualStyleBackColor = true;
@@ -1156,10 +1206,10 @@ private: System::Windows::Forms::Button^  button16;
 				 // 
 				 // button7
 				 // 
-				 this->button7->Location = System::Drawing::Point(221, 285);
-				 this->button7->Margin = System::Windows::Forms::Padding(4);
+				 this->button7->Location = System::Drawing::Point(83, 114);
+				 this->button7->Margin = System::Windows::Forms::Padding(2);
 				 this->button7->Name = L"button7";
-				 this->button7->Size = System::Drawing::Size(168, 59);
+				 this->button7->Size = System::Drawing::Size(63, 24);
 				 this->button7->TabIndex = 18;
 				 this->button7->Text = L"新增";
 				 this->button7->UseVisualStyleBackColor = true;
@@ -1174,13 +1224,13 @@ private: System::Windows::Forms::Button^  button16;
 					 this->Column1,
 						 this->s品名, this->s價格, this->s數量, this->s小記
 				 });
-				 this->dataGridView2->Location = System::Drawing::Point(704, 28);
-				 this->dataGridView2->Margin = System::Windows::Forms::Padding(4);
+				 this->dataGridView2->Location = System::Drawing::Point(264, 11);
+				 this->dataGridView2->Margin = System::Windows::Forms::Padding(2);
 				 this->dataGridView2->Name = L"dataGridView2";
 				 this->dataGridView2->RowHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
 				 this->dataGridView2->RowHeadersVisible = false;
 				 this->dataGridView2->RowTemplate->Height = 45;
-				 this->dataGridView2->Size = System::Drawing::Size(959, 624);
+				 this->dataGridView2->Size = System::Drawing::Size(360, 250);
 				 this->dataGridView2->TabIndex = 17;
 				 this->dataGridView2->CellValueChanged += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &Form1::dataGridView2_CellValueChanged);
 				 // 
@@ -1213,48 +1263,49 @@ private: System::Windows::Forms::Button^  button16;
 				 // textBox10
 				 // 
 				 this->textBox10->AcceptsTab = true;
-				 this->textBox10->Location = System::Drawing::Point(221, 184);
-				 this->textBox10->Margin = System::Windows::Forms::Padding(4);
+				 this->textBox10->Location = System::Drawing::Point(83, 74);
+				 this->textBox10->Margin = System::Windows::Forms::Padding(2);
 				 this->textBox10->Name = L"textBox10";
-				 this->textBox10->Size = System::Drawing::Size(436, 43);
+				 this->textBox10->Size = System::Drawing::Size(166, 22);
 				 this->textBox10->TabIndex = 15;
 				 // 
 				 // textBox11
 				 // 
 				 this->textBox11->AcceptsTab = true;
-				 this->textBox11->Location = System::Drawing::Point(221, 77);
-				 this->textBox11->Margin = System::Windows::Forms::Padding(4);
+				 this->textBox11->Location = System::Drawing::Point(83, 31);
+				 this->textBox11->Margin = System::Windows::Forms::Padding(2);
 				 this->textBox11->Name = L"textBox11";
-				 this->textBox11->Size = System::Drawing::Size(436, 43);
+				 this->textBox11->Size = System::Drawing::Size(166, 22);
 				 this->textBox11->TabIndex = 14;
 				 this->textBox11->TextChanged += gcnew System::EventHandler(this, &Form1::textBox11_TextChanged);
 				 // 
 				 // label11
 				 // 
 				 this->label11->AutoSize = true;
-				 this->label11->Location = System::Drawing::Point(57, 187);
-				 this->label11->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+				 this->label11->Location = System::Drawing::Point(21, 75);
+				 this->label11->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 				 this->label11->Name = L"label11";
-				 this->label11->Size = System::Drawing::Size(73, 30);
+				 this->label11->Size = System::Drawing::Size(29, 12);
 				 this->label11->TabIndex = 8;
 				 this->label11->Text = L"數量";
 				 // 
 				 // label12
 				 // 
 				 this->label12->AutoSize = true;
-				 this->label12->Location = System::Drawing::Point(57, 80);
-				 this->label12->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+				 this->label12->Location = System::Drawing::Point(21, 32);
+				 this->label12->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 				 this->label12->Name = L"label12";
-				 this->label12->Size = System::Drawing::Size(103, 30);
+				 this->label12->Size = System::Drawing::Size(41, 12);
 				 this->label12->TabIndex = 7;
 				 this->label12->Text = L"流水號";
 				 // 
 				 // button12
 				 // 
 				 this->button12->Enabled = false;
-				 this->button12->Location = System::Drawing::Point(1780, 609);
+				 this->button12->Location = System::Drawing::Point(668, 279);
+				 this->button12->Margin = System::Windows::Forms::Padding(1);
 				 this->button12->Name = L"button12";
-				 this->button12->Size = System::Drawing::Size(200, 64);
+				 this->button12->Size = System::Drawing::Size(75, 26);
 				 this->button12->TabIndex = 15;
 				 this->button12->Text = L"登出";
 				 this->button12->UseVisualStyleBackColor = true;
@@ -1263,9 +1314,10 @@ private: System::Windows::Forms::Button^  button16;
 				 // label17
 				 // 
 				 this->label17->AutoSize = true;
-				 this->label17->Location = System::Drawing::Point(225, 974);
+				 this->label17->Location = System::Drawing::Point(84, 390);
+				 this->label17->Margin = System::Windows::Forms::Padding(1, 0, 1, 0);
 				 this->label17->Name = L"label17";
-				 this->label17->Size = System::Drawing::Size(73, 30);
+				 this->label17->Size = System::Drawing::Size(29, 12);
 				 this->label17->TabIndex = 16;
 				 this->label17->Text = L"姓名";
 				 this->label17->Visible = false;
@@ -1273,9 +1325,10 @@ private: System::Windows::Forms::Button^  button16;
 				 // label18
 				 // 
 				 this->label18->AutoSize = true;
-				 this->label18->Location = System::Drawing::Point(724, 974);
+				 this->label18->Location = System::Drawing::Point(272, 390);
+				 this->label18->Margin = System::Windows::Forms::Padding(1, 0, 1, 0);
 				 this->label18->Name = L"label18";
-				 this->label18->Size = System::Drawing::Size(73, 30);
+				 this->label18->Size = System::Drawing::Size(29, 12);
 				 this->label18->TabIndex = 17;
 				 this->label18->Text = L"排班";
 				 this->label18->Visible = false;
@@ -1283,18 +1336,105 @@ private: System::Windows::Forms::Button^  button16;
 				 // label19
 				 // 
 				 this->label19->AutoSize = true;
-				 this->label19->Location = System::Drawing::Point(1196, 974);
+				 this->label19->Location = System::Drawing::Point(448, 390);
+				 this->label19->Margin = System::Windows::Forms::Padding(1, 0, 1, 0);
 				 this->label19->Name = L"label19";
-				 this->label19->Size = System::Drawing::Size(73, 30);
+				 this->label19->Size = System::Drawing::Size(29, 12);
 				 this->label19->TabIndex = 18;
 				 this->label19->Text = L"職稱";
 				 this->label19->Visible = false;
 				 // 
+				 // panel1
+				 // 
+				 this->panel1->Controls->Add(this->checkedListBox1);
+				 this->panel1->Controls->Add(this->button20);
+				 this->panel1->Controls->Add(this->button19);
+				 this->panel1->Controls->Add(this->textBox19);
+				 this->panel1->Controls->Add(this->dataGridView4);
+				 this->panel1->Location = System::Drawing::Point(747, 4);
+				 this->panel1->Name = L"panel1";
+				 this->panel1->Size = System::Drawing::Size(663, 411);
+				 this->panel1->TabIndex = 19;
+				 // 
+				 // checkedListBox1
+				 // 
+				 this->checkedListBox1->FormattingEnabled = true;
+				 this->checkedListBox1->Location = System::Drawing::Point(174, 298);
+				 this->checkedListBox1->Name = L"checkedListBox1";
+				 this->checkedListBox1->Size = System::Drawing::Size(120, 89);
+				 this->checkedListBox1->TabIndex = 31;
+				 // 
+				 // button20
+				 // 
+				 this->button20->Location = System::Drawing::Point(66, 319);
+				 this->button20->Margin = System::Windows::Forms::Padding(2);
+				 this->button20->Name = L"button20";
+				 this->button20->Size = System::Drawing::Size(64, 26);
+				 this->button20->TabIndex = 30;
+				 this->button20->Text = L"確認修改";
+				 this->button20->UseVisualStyleBackColor = true;
+				 // 
+				 // button19
+				 // 
+				 this->button19->Location = System::Drawing::Point(530, 5);
+				 this->button19->Margin = System::Windows::Forms::Padding(2);
+				 this->button19->Name = L"button19";
+				 this->button19->Size = System::Drawing::Size(64, 26);
+				 this->button19->TabIndex = 29;
+				 this->button19->Text = L"查詢";
+				 this->button19->UseVisualStyleBackColor = true;
+				 this->button19->Click += gcnew System::EventHandler(this, &Form1::button19_Click);
+				 // 
+				 // textBox19
+				 // 
+				 this->textBox19->Location = System::Drawing::Point(158, 9);
+				 this->textBox19->Margin = System::Windows::Forms::Padding(2);
+				 this->textBox19->Name = L"textBox19";
+				 this->textBox19->Size = System::Drawing::Size(368, 22);
+				 this->textBox19->TabIndex = 29;
+				 // 
+				 // dataGridView4
+				 // 
+				 this->dataGridView4->AllowUserToAddRows = false;
+				 this->dataGridView4->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+				 this->dataGridView4->Location = System::Drawing::Point(11, 43);
+				 this->dataGridView4->Name = L"dataGridView4";
+				 this->dataGridView4->RowHeadersVisible = false;
+				 this->dataGridView4->RowTemplate->Height = 24;
+				 this->dataGridView4->Size = System::Drawing::Size(559, 178);
+				 this->dataGridView4->TabIndex = 0;
+				 // 
+				 // button18
+				 // 
+				 this->button18->Location = System::Drawing::Point(668, 230);
+				 this->button18->Name = L"button18";
+				 this->button18->Size = System::Drawing::Size(75, 30);
+				 this->button18->TabIndex = 20;
+				 this->button18->Text = L"班表";
+				 this->button18->UseVisualStyleBackColor = true;
+				 this->button18->Click += gcnew System::EventHandler(this, &Form1::button18_Click);
+				 // 
+				 // dateTimePicker1
+				 // 
+				 this->dateTimePicker1->Location = System::Drawing::Point(251, 123);
+				 this->dateTimePicker1->Name = L"dateTimePicker1";
+				 this->dateTimePicker1->Size = System::Drawing::Size(166, 22);
+				 this->dateTimePicker1->TabIndex = 18;
+				 // 
+				 // dateTimePicker2
+				 // 
+				 this->dateTimePicker2->Location = System::Drawing::Point(251, 156);
+				 this->dateTimePicker2->Name = L"dateTimePicker2";
+				 this->dateTimePicker2->Size = System::Drawing::Size(166, 22);
+				 this->dateTimePicker2->TabIndex = 19;
+				 // 
 				 // Form1
 				 // 
-				 this->AutoScaleDimensions = System::Drawing::SizeF(16, 30);
+				 this->AutoScaleDimensions = System::Drawing::SizeF(6, 12);
 				 this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-				 this->ClientSize = System::Drawing::Size(3178, 1046);
+				 this->ClientSize = System::Drawing::Size(1465, 418);
+				 this->Controls->Add(this->button18);
+				 this->Controls->Add(this->panel1);
 				 this->Controls->Add(this->label19);
 				 this->Controls->Add(this->label18);
 				 this->Controls->Add(this->label17);
@@ -1303,12 +1443,12 @@ private: System::Windows::Forms::Button^  button16;
 				 this->Controls->Add(this->button4);
 				 this->Controls->Add(this->button3);
 				 this->Controls->Add(this->button2);
+				 this->Controls->Add(this->purchase);
+				 this->Controls->Add(this->sell);
 				 this->Controls->Add(this->member);
 				 this->Controls->Add(this->login);
 				 this->Controls->Add(this->search);
-				 this->Controls->Add(this->purchase);
-				 this->Controls->Add(this->sell);
-				 this->Margin = System::Windows::Forms::Padding(4);
+				 this->Margin = System::Windows::Forms::Padding(2);
 				 this->MinimizeBox = false;
 				 this->Name = L"Form1";
 				 this->Text = L"Form1";
@@ -1325,6 +1465,9 @@ private: System::Windows::Forms::Button^  button16;
 				 this->sell->ResumeLayout(false);
 				 this->sell->PerformLayout();
 				 (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->EndInit();
+				 this->panel1->ResumeLayout(false);
+				 this->panel1->PerformLayout();
+				 (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView4))->EndInit();
 				 this->ResumeLayout(false);
 				 this->PerformLayout();
 
@@ -1335,10 +1478,17 @@ private: System::Windows::Forms::Button^  button16;
 		A.search_product(connect, comboBox1, checkBox1, textBox1, dataGridView1);
 	}
 	private: System::Void button6_Click(System::Object^  sender, System::EventArgs^  e) {
+		String ^arv, ^exp;
+		String^s = Convert::ToString(dateTimePicker1->Value);
+		array<String^>^ words1 = s->Split(' ');
+		arv = words1[0];
+		s = Convert::ToString(dateTimePicker2->Value);
+		words1 = s->Split(' ');
+		exp = words1[0];
 		if (comboBox2->SelectedItem == "微波食品")
 		{
-			SYSTEMTIME arval = stringtotime(textBox6->Text);//{ 2017,12,0,7,0,0,0,0 };
-			SYSTEMTIME expired = stringtotime(textBox5->Text);// { 2017, 12, 0, 8, 0, 0, 0, 0 };
+			SYSTEMTIME arval = stringtotime(arv);//{ 2017,12,0,7,0,0,0,0 };
+			SYSTEMTIME expired = stringtotime(exp);// { 2017, 12, 0, 8, 0, 0, 0, 0 };
 			SYSTEMTIME cooked{ 0,0,0,0,0,0,Convert::ToInt32(textBox4->Text),0 };
 			int price = Convert::ToInt32(textBox8->Text);
 			int temp = Convert::ToInt32(textBox3->Text);
@@ -1348,8 +1498,8 @@ private: System::Windows::Forms::Button^  button16;
 		}
 		else if (comboBox2->SelectedItem == "生鮮食品")
 		{
-			SYSTEMTIME arval = stringtotime(textBox6->Text);//{ 2017,12,0,7,0,0,0,0 };
-			SYSTEMTIME expired = stringtotime(textBox5->Text);// { 2017, 12, 0, 8, 0, 0, 0, 0 };
+			SYSTEMTIME arval = stringtotime(arv);//{ 2017,12,0,7,0,0,0,0 };
+			SYSTEMTIME expired = stringtotime(exp);// { 2017, 12, 0, 8, 0, 0, 0, 0 };
 			int price = Convert::ToInt32(textBox8->Text);
 			int temp = Convert::ToInt32(textBox3->Text);
 			theFrozen tf(0, textBox2->Text, arval, expired, price, temp);
@@ -1358,8 +1508,8 @@ private: System::Windows::Forms::Button^  button16;
 		}
 		else if (comboBox2->SelectedItem == "食品")
 		{
-			SYSTEMTIME arval = stringtotime(textBox6->Text);//{ 2017,12,0,7,0,0,0,0 };
-			SYSTEMTIME expired = stringtotime(textBox5->Text);// { 2017, 12, 0, 8, 0, 0, 0, 0 };
+			SYSTEMTIME arval = stringtotime(arv);//{ 2017,12,0,7,0,0,0,0 };
+			SYSTEMTIME expired = stringtotime(exp);// { 2017, 12, 0, 8, 0, 0, 0, 0 };
 			int price = Convert::ToInt32(textBox8->Text);
 			Food f(0, textBox2->Text, arval, expired, price);
 			f.set_number(Convert::ToInt32(textBox7->Text));
@@ -1375,7 +1525,7 @@ private: System::Windows::Forms::Button^  button16;
 		}
 		else if (comboBox2->SelectedItem == "日用品")
 		{
-			SYSTEMTIME arval = stringtotime(textBox6->Text);//{ 2017,12,0,7,0,0,0,0 };
+			SYSTEMTIME arval = stringtotime(arv);//{ 2017,12,0,7,0,0,0,0 };
 			int price = Convert::ToInt32(textBox8->Text);
 
 			Product p(0, textBox2->Text, arval, arval, price);
@@ -1416,22 +1566,22 @@ private: System::Windows::Forms::Button^  button16;
 		if (comboBox2->SelectedItem == "微波食品") {
 			textBox3->Enabled = true;
 			textBox4->Enabled = true;
-			textBox5->Enabled = true;
+			dateTimePicker2->Enabled = true;
 		}
 		if (comboBox2->SelectedItem == "生鮮食品") {
 			textBox4->Enabled = false;
-			textBox5->Enabled = true;
+			dateTimePicker2->Enabled = true;
 			textBox3->Enabled = true;
 		}
 		if (comboBox2->SelectedItem == "食品") {
-			textBox5->Enabled = true;
+			dateTimePicker2->Enabled = true;
 			textBox4->Enabled = false;
 			textBox3->Enabled = false;
 		}
 		if (comboBox2->SelectedItem == "日用品") {
 			textBox4->Enabled = false;
 			textBox3->Enabled = false;
-			textBox5->Enabled = false;
+			dateTimePicker2->Enabled = false;
 		}
 
 	}
@@ -1568,6 +1718,161 @@ private: System::Void button16_Click(System::Object^  sender, System::EventArgs^
 private: System::Void button17_Click(System::Object^  sender, System::EventArgs^  e) {
 	Staff A;
 	A.staff_fired(connect, textBox13);
+}
+private: System::Void button19_Click(System::Object^  sender, System::EventArgs^  e) {
+	MySqlCommand ^cmd;
+	MySqlDataReader ^reader;
+	/* Used to input the MySQL message */
+	String^ strSQL;
+
+
+	System::String^ usr;
+	strSQL = "select * from s201701 where";
+	bool first = false;
+	for (int i = 0; i < checkedListBox1->Items->Count; i++) {
+		if (checkedListBox1->GetItemChecked(i)) {
+			if (first == false) {
+				usr = checkedListBox1->Items[i]->ToString();
+				usr = usr->Split(L' ')[0];
+				strSQL += " 帳號=" + "'" + usr + "'";
+				first = true;
+			}
+			else {
+				usr = checkedListBox1->Items[i]->ToString();
+				usr = usr->Split(L' ')[0];
+				strSQL += " or 帳號=" + "'" + usr + "'";
+			}
+		}
+	}
+	strSQL += ";";
+
+	dataGridView4->Rows->Clear();
+
+	try
+	{
+		/* 連結開啟 */
+		connect->Open();
+		/* 傳送指令到 MySQL */
+		//
+		cmd = gcnew MySqlCommand(strSQL, connect);
+		reader = cmd->ExecuteReader();
+		int j = 0;
+		/* 讀取資料 */
+		while (reader->Read())
+		{
+			dataGridView4->Rows->Add();
+			for (int i = 0; i<reader->FieldCount; i++)
+			{
+				String ^read = reader->GetString(i);
+
+				dataGridView4->Rows[j]->Cells[i]->Value = read;
+			}
+			j++;
+		}
+		/* 連結關閉 */
+		connect->Close();
+		delete cmd;
+	}
+	catch (Exception ^ex)
+	{
+		System::Windows::Forms::DialogResult result;
+		result = MessageBox::Show(ex->ToString());
+		connect->Close();
+		delete cmd;
+	}
+
+	
+}
+private: System::Void button18_Click(System::Object^  sender, System::EventArgs^  e) {
+	dataGridView4->Rows->Clear();
+	dataGridView4->Columns->Clear();
+	checkedListBox1->Items->Clear();
+
+
+
+	dataGridView4->Columns->Add("人員", "人員");
+
+
+	for (int i = 0; i < 7; i++) {
+		dataGridView4->Columns->Add(i.ToString(), i.ToString());
+	}
+	MySqlCommand ^cmd;
+	MySqlDataReader ^reader;
+	/* Used to input the MySQL message */
+	String^ strSQL;
+	try
+	{
+		/* 連結開啟 */
+		connect->Open();
+		/* 傳送指令到 MySQL */
+		//
+		strSQL = "select 帳號,姓名 from 人員;";//MySQL command you want to use
+										  //textBox1->Text = strSQL;																 //
+		cmd = gcnew MySqlCommand(strSQL, connect);
+		reader = cmd->ExecuteReader();
+		int j = 0;
+		/* 讀取資料 */
+		while (reader->Read())
+		{
+			String ^read;
+			for (int i = 0; i<reader->FieldCount; i++)
+			{
+				if (i != 0)
+					read += " ";
+				read += reader->GetString(i);
+
+
+				
+			}
+			checkedListBox1->Items->Add(read);
+			j++;
+		}
+		/* 連結關閉 */
+		connect->Close();
+		delete cmd;
+	}
+	catch (Exception ^ex)
+	{
+		System::Windows::Forms::DialogResult result;
+		result = MessageBox::Show(ex->ToString());
+		connect->Close();
+		delete cmd;
+	}
+	try
+	{
+		/* 連結開啟 */
+		connect->Open();
+		/* 傳送指令到 MySQL */
+		//
+		strSQL = "select * from s201701;";//MySQL command you want to use
+										  //textBox1->Text = strSQL;																 //
+		cmd = gcnew MySqlCommand(strSQL, connect);
+		reader = cmd->ExecuteReader();
+		int j = 0;
+		/* 讀取資料 */
+		while (reader->Read())
+		{
+			dataGridView4->Rows->Add();
+			for (int i = 0; i<reader->FieldCount; i++)
+			{
+				String ^read = reader->GetString(i);
+
+				dataGridView4->Rows[j]->Cells[i]->Value = read;
+			}
+			j++;
+		}
+		/* 連結關閉 */
+		connect->Close();
+		delete cmd;
+	}
+	catch (Exception ^ex)
+	{
+		System::Windows::Forms::DialogResult result;
+		result = MessageBox::Show(ex->ToString());
+		connect->Close();
+		delete cmd;
+	}
+	//dataGridView4->Rows[0]->Cells[1]->Style->BackColor = Color::Red;
 }
 };
 }
