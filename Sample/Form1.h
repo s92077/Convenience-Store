@@ -1503,12 +1503,12 @@ private: System::Windows::Forms::Button^  button21;
 				 this->Controls->Add(this->button4);
 				 this->Controls->Add(this->button3);
 				 this->Controls->Add(this->button2);
-				 this->Controls->Add(this->member);
-				 this->Controls->Add(this->panel1);
 				 this->Controls->Add(this->login);
 				 this->Controls->Add(this->search);
 				 this->Controls->Add(this->purchase);
 				 this->Controls->Add(this->sell);
+				 this->Controls->Add(this->member);
+				 this->Controls->Add(this->panel1);
 				 this->Margin = System::Windows::Forms::Padding(5);
 				 this->MinimizeBox = false;
 				 this->Name = L"Form1";
@@ -1749,6 +1749,7 @@ private: System::Void button12_Click(System::Object^  sender, System::EventArgs^
 	button3->Enabled = false;
 	button4->Enabled = false;
 	button5->Enabled = false;
+	button18->Enabled = false;
 	button12->Enabled = false;
 	label17->Visible = false;
 	label18->Visible = false;
@@ -2081,7 +2082,6 @@ private: System::Void button20_Click_1(System::Object^  sender, System::EventArg
 				strSQL += "'" + dataGridView4->Rows[i]->Cells[7]->Value + "'";
 				strSQL += ");";
 			}
-			account->Text = strSQL;
 			cmd = gcnew MySqlCommand(strSQL, connect);
 			reader = cmd->ExecuteReader();
 			connect->Close();
