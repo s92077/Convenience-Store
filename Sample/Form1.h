@@ -249,12 +249,14 @@ private: System::Windows::Forms::DataGridView^  dataGridView4;
 
 
 private: System::Windows::Forms::Button^  button19;
-private: System::Windows::Forms::TextBox^  textBox19;
+
 private: System::Windows::Forms::Button^  button18;
 private: System::Windows::Forms::Button^  button20;
 private: System::Windows::Forms::CheckedListBox^  checkedListBox1;
 private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 private: System::Windows::Forms::DateTimePicker^  dateTimePicker1;
+private: System::Windows::Forms::DateTimePicker^  dateTimePicker3;
+private: System::Windows::Forms::TextBox^  textBox19;
 
 
 
@@ -347,6 +349,8 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker1;
 				 this->textBox12 = (gcnew System::Windows::Forms::TextBox());
 				 this->button10 = (gcnew System::Windows::Forms::Button());
 				 this->purchase = (gcnew System::Windows::Forms::Panel());
+				 this->dateTimePicker2 = (gcnew System::Windows::Forms::DateTimePicker());
+				 this->dateTimePicker1 = (gcnew System::Windows::Forms::DateTimePicker());
 				 this->label13 = (gcnew System::Windows::Forms::Label());
 				 this->comboBox2 = (gcnew System::Windows::Forms::ComboBox());
 				 this->button6 = (gcnew System::Windows::Forms::Button());
@@ -393,14 +397,13 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker1;
 				 this->label18 = (gcnew System::Windows::Forms::Label());
 				 this->label19 = (gcnew System::Windows::Forms::Label());
 				 this->panel1 = (gcnew System::Windows::Forms::Panel());
+				 this->dateTimePicker3 = (gcnew System::Windows::Forms::DateTimePicker());
 				 this->checkedListBox1 = (gcnew System::Windows::Forms::CheckedListBox());
 				 this->button20 = (gcnew System::Windows::Forms::Button());
 				 this->button19 = (gcnew System::Windows::Forms::Button());
 				 this->textBox19 = (gcnew System::Windows::Forms::TextBox());
 				 this->dataGridView4 = (gcnew System::Windows::Forms::DataGridView());
 				 this->button18 = (gcnew System::Windows::Forms::Button());
-				 this->dateTimePicker1 = (gcnew System::Windows::Forms::DateTimePicker());
-				 this->dateTimePicker2 = (gcnew System::Windows::Forms::DateTimePicker());
 				 (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 				 this->search->SuspendLayout();
 				 this->member->SuspendLayout();
@@ -893,6 +896,20 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker1;
 				 this->purchase->TabIndex = 12;
 				 this->purchase->Visible = false;
 				 // 
+				 // dateTimePicker2
+				 // 
+				 this->dateTimePicker2->Location = System::Drawing::Point(251, 156);
+				 this->dateTimePicker2->Name = L"dateTimePicker2";
+				 this->dateTimePicker2->Size = System::Drawing::Size(166, 22);
+				 this->dateTimePicker2->TabIndex = 19;
+				 // 
+				 // dateTimePicker1
+				 // 
+				 this->dateTimePicker1->Location = System::Drawing::Point(251, 123);
+				 this->dateTimePicker1->Name = L"dateTimePicker1";
+				 this->dateTimePicker1->Size = System::Drawing::Size(166, 22);
+				 this->dateTimePicker1->TabIndex = 18;
+				 // 
 				 // label13
 				 // 
 				 this->label13->AutoSize = true;
@@ -1346,6 +1363,7 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker1;
 				 // 
 				 // panel1
 				 // 
+				 this->panel1->Controls->Add(this->dateTimePicker3);
 				 this->panel1->Controls->Add(this->checkedListBox1);
 				 this->panel1->Controls->Add(this->button20);
 				 this->panel1->Controls->Add(this->button19);
@@ -1355,6 +1373,16 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker1;
 				 this->panel1->Name = L"panel1";
 				 this->panel1->Size = System::Drawing::Size(663, 411);
 				 this->panel1->TabIndex = 19;
+				 // 
+				 // dateTimePicker3
+				 // 
+				 this->dateTimePicker3->CustomFormat = L"yyyy年MM月";
+				 this->dateTimePicker3->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
+				 this->dateTimePicker3->Location = System::Drawing::Point(108, 234);
+				 this->dateTimePicker3->Name = L"dateTimePicker3";
+				 this->dateTimePicker3->ShowUpDown = true;
+				 this->dateTimePicker3->Size = System::Drawing::Size(200, 22);
+				 this->dateTimePicker3->TabIndex = 32;
 				 // 
 				 // checkedListBox1
 				 // 
@@ -1413,20 +1441,6 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker1;
 				 this->button18->Text = L"班表";
 				 this->button18->UseVisualStyleBackColor = true;
 				 this->button18->Click += gcnew System::EventHandler(this, &Form1::button18_Click);
-				 // 
-				 // dateTimePicker1
-				 // 
-				 this->dateTimePicker1->Location = System::Drawing::Point(251, 123);
-				 this->dateTimePicker1->Name = L"dateTimePicker1";
-				 this->dateTimePicker1->Size = System::Drawing::Size(166, 22);
-				 this->dateTimePicker1->TabIndex = 18;
-				 // 
-				 // dateTimePicker2
-				 // 
-				 this->dateTimePicker2->Location = System::Drawing::Point(251, 156);
-				 this->dateTimePicker2->Name = L"dateTimePicker2";
-				 this->dateTimePicker2->Size = System::Drawing::Size(166, 22);
-				 this->dateTimePicker2->TabIndex = 19;
 				 // 
 				 // Form1
 				 // 
@@ -1727,14 +1741,14 @@ private: System::Void button19_Click(System::Object^  sender, System::EventArgs^
 
 
 	System::String^ usr;
-	strSQL = "select * from s201701 where";
+	strSQL = "select * from s201701";
 	bool first = false;
 	for (int i = 0; i < checkedListBox1->Items->Count; i++) {
 		if (checkedListBox1->GetItemChecked(i)) {
 			if (first == false) {
 				usr = checkedListBox1->Items[i]->ToString();
 				usr = usr->Split(L' ')[0];
-				strSQL += " 帳號=" + "'" + usr + "'";
+				strSQL += " where 帳號=" + "'" + usr + "'";
 				first = true;
 			}
 			else {
@@ -1781,6 +1795,41 @@ private: System::Void button19_Click(System::Object^  sender, System::EventArgs^
 		delete cmd;
 	}
 
+
+
+	String ^arv, ^exp;
+	String^ s = "'s"+dateTimePicker3->Value.Date.ToString("yyyyMM")+"'";
+	textBox19->Text = s;
+	bool table_exist = false;
+
+	try
+	{
+		/* 連結開啟 */
+		connect->Open();
+		/* 傳送指令到 MySQL */
+		//
+		strSQL = "show tables like " + s + ";";
+		cmd = gcnew MySqlCommand(strSQL, connect);
+		reader = cmd->ExecuteReader();
+		
+
+		/* 讀取資料 */
+		if (reader->Read())
+		{
+				table_exist = true;
+		}
+		/* 連結關閉 */
+		connect->Close();
+		delete cmd;
+	}
+	catch (Exception ^ex)
+	{
+		System::Windows::Forms::DialogResult result;
+		result = MessageBox::Show(ex->ToString());
+		connect->Close();
+		delete cmd;
+	}
+	textBox19->Text = table_exist.ToString();
 	
 }
 private: System::Void button18_Click(System::Object^  sender, System::EventArgs^  e) {
