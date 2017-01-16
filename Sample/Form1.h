@@ -1702,7 +1702,7 @@ private: System::Void button9_Click(System::Object^  sender, System::EventArgs^ 
 	words1 = label10->Text->Split(':');
 	array<String^>^ words2;
 	words2 = label14->Text->Split(':');
-	label15->Text = "§ä¹s:" + Convert::ToString(Convert::ToInt32(words1[1]) - Convert::ToInt32(words2[1]));
+	label15->Text = "§ä¹s:" + Convert::ToString(Convert::ToInt32(words2[1]) - Convert::ToInt32(words1[1]));
 	textBox9->Text = "";
 }
 private: System::Void dataGridView3_CellContentClick(System::Object^  sender, System::Windows::Forms::DataGridViewCellEventArgs^  e) {
